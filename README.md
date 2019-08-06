@@ -3,7 +3,7 @@ Designing the Data Science Classroom
 
 ### rstudio::conf 2020
 
-by INSTRUCTOR_NAME
+by Mine Cetinkaya-Rundel
 
 -----
 
