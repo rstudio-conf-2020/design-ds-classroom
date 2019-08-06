@@ -1,4 +1,4 @@
-WORKSHOP_TITLE
+Designing the Data Science Classroom
 ================
 
 ### rstudio::conf 2020
