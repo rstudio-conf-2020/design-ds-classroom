@@ -33,7 +33,7 @@ This workshop is aimed primarily at participants teaching data science in an aca
 
 ## Learning objectives
 
-LEARNING_OBJECTIVES
+Curriculum, workflow, and infrastructure design for teaching data science with R and RStudio.
 
 ## Is this course for me?
 
