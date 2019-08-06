@@ -37,7 +37,7 @@ Curriculum, workflow, and infrastructure design for teaching data science with R
 
 ## Is this course for me?
 
-THREE_QUESTIONS
+ADD THREE QUESTIONS
 
 ## Prework
 
