@@ -25,7 +25,11 @@ can remove these instructions from the README.
 
 ## Overview
 
-ABSTRACT
+Success in data science and statistics is dependent on the development of both analytical and computational skills, and the demand for educators who are proficient at teaching both these skills is growing. The goal of this workshop is to equip educators with concrete information on content, workflows, and infrastructure for painlessly introducing modern computation with R and RStudio within a data science curriculum.
+
+In addition to gaining technical knowledge, participants will engage in discussion around the decisions that go into developing a data science curriculum and choosing workflows and infrastructure that best support the curriculum and allow for scalability. Workshop attendees will work through several exercises from existing courses and get first-hand experience with using relevant tool-chains and techniques, including running a course on RStudio Cloud, and literate programming with R Markdown, and workflows for collaboration, version control, and automated feedback with Git/GitHub. We will also discuss best practices for configuring and deploying classroom infrastructures to support these tools. 
+
+This workshop is aimed primarily at participants teaching data science in an academic setting in semester-long courses, however much of the information and tooling we introduce is applicable for shorter teaching experiences like workshops and bootcamps as well. Basic knowledge of R is assumed and familiarity with Git is preferred.
 
 ## Learning objectives
 
