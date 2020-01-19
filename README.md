@@ -74,7 +74,7 @@ So, let's focus on the former -- the instructor view. The list of items you shou
 | Time          | Activity         |
 | :------------ | :--------------- |
 | 09:00 - 10:30 | Getting more out of GitHub: |
-|               | Peer review, automation and feedback with GitHub Actions  |
+|               | Peer review, automation & feedback  |
 | 10:30 - 11:00 | :coffee: *Coffee break*   |
 | 11:00 - 12:30 | Interactivity and immediate feedback: Learnr |
 | 12:00 - 13:30 | :fork_and_knife: *Lunch break*    |
