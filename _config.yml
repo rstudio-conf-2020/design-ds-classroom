@@ -1,3 +1,4 @@
 plugins:
   - jemoji
 theme: jekyll-theme-minimal
+logo: logo.gif
