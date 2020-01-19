@@ -18,7 +18,7 @@ can remove these instructions from the README.
 
 :spiral_calendar: January 27 and 28, 2020  
 :alarm_clock:     09:00 - 17:00  
-:hotel:           \[ADD ROOM\]  
+:hotel:           Union Square 22  
 :writing_hand:    [rstd.io/conf](http://rstd.io/conf)
 
 -----
