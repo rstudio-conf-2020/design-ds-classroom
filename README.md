@@ -62,23 +62,25 @@ So, let's focus on the former -- the instructor view. The list of items you shou
 | Time          | Activity         |
 | :------------ | :--------------- |
 | 09:00 - 10:30 | Welcome +  Curriculum design |
-| 10:30 - 11:00 | *Coffee break*   |
+| 10:30 - 11:00 | :coffee: *Coffee break*   |
 | 11:00 - 12:30 | Teaching the tidyverse: 2020 updates |
-| 12:00 - 13:30 | *Lunch break*    |
+| 12:00 - 13:30 | :fork_and_knife: *Lunch break*    |
 | 13:30 - 15:00 | Computing infrastructure: RStudio Cloud |
-| 15:00 - 15:30 | *Coffee break*   |
+| 15:00 - 15:30 | :coffee: *Coffee break*   |
 | 15:30 - 17:00 | Reproducible workflows: R Markdown, Git, GitHub |
 
 ### Day 2 - Monday, Jan 28
 
 | Time          | Activity         |
 | :------------ | :--------------- |
-| 09:00 - 10:30 | Getting more out of GitHub: Peer review, automation and feedback with GitHub Actions  |
-| 10:30 - 11:00 | *Coffee break*   |
+| 09:00 - 10:30 | Getting more out of GitHub: |
+|               | Peer review, automation and feedback with GitHub Actions  |
+| 10:30 - 11:00 | :coffee: *Coffee break*   |
 | 11:00 - 12:30 | Interactivity and immediate feedback: Learnr |
-| 12:00 - 13:30 | *Lunch break*    |
-| 13:30 - 15:00 | #rstats lifehacks for instructors: student dashboard, blogdown, and more |
-| 15:00 - 15:30 | *Coffee break*   |
+| 12:00 - 13:30 | :fork_and_knife: *Lunch break*    |
+| 13:30 - 15:00 | #rstats lifehacks for instructors: |
+|               | student dashboard, blogdown, and more |
+| 15:00 - 15:30 | :coffee: *Coffee break*   |
 | 15:30 - 17:00 | Case studuies + wrap up   |
 
 ## Instructor
