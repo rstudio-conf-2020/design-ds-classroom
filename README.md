@@ -60,7 +60,7 @@ So, let's focus on the former -- the instructor view. The list of items you shou
 - [Install Git](https://happygitwithr.com/install-git.html#install-git)
 - [Introduce yourself to Git](https://happygitwithr.com/hello-git.html#hello-git)
 - [Prove local Git can talk to GitHub](https://happygitwithr.com/push-pull-github.html#push-pull-github)
-- [Cache your username and password or set up SSH keys](https://happygitwithr.com/credential-caching.html#credential-caching) so you don’t need to authenticate yourself to GitHub interactively *ad nauseum*.
+- [Cache your username and password or set up SSH keys](https://happygitwithr.com/credential-caching.html#credential-caching)
 - [Create and save a GitHub Personal Access Token (PAT)](https://happygitwithr.com/credential-caching.html#credential-caching)
 - [Prove RStudio can find local Git and, therefore, can talk to GitHub](https://happygitwithr.com/rstudio-git-github.html#rstudio-git-github)
 
