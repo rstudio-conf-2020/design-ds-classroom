@@ -78,8 +78,7 @@ So, let's focus on the former -- the instructor view. The list of items you shou
 | 10:30 - 11:00 | :coffee: *Coffee break*   |
 | 11:00 - 12:30 | Interactivity and immediate feedback: Learnr |
 | 12:00 - 13:30 | :fork_and_knife: *Lunch break*    |
-| 13:30 - 15:00 | #rstats lifehacks for instructors: |
-|               | student dashboard, blogdown, and more |
+| 13:30 - 15:00 | #rstats lifehacks for instructors |
 | 15:00 - 15:30 | :coffee: *Coffee break*   |
 | 15:30 - 17:00 | Case studuies + wrap up   |
 
