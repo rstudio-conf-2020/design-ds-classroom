@@ -1,12 +1,3 @@
-Designing the Data Science Classroom
-================
-
-### rstudio::conf 2020
-
-by Mine Çetinkaya-Rundel
-
------
-
 :spiral_calendar: January 27 and 28, 2020  
 :alarm_clock:     09:00 - 17:00  
 :hotel:           Union Square 22  
