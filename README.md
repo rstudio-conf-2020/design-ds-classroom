@@ -57,9 +57,6 @@ So, let's focus on the former -- the instructor view. The list of items you shou
 | 11:00 - 12:30 | [Teaching the tidyverse](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/02-teach-tidyverse) |
 | 12:00 - 13:30 | :fork_and_knife: *Lunch break*    |
 | 13:30 - 15:00 | [Computing infrastructure: RStudio Cloud](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/03-rstudio-cloud) |
-
-
-
 | 15:00 - 15:30 | :coffee: *Coffee break*   |
 | 15:30 - 17:00 | [Reproducible workflows: R Markdown, Git, GitHub](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/04-github) |
 
