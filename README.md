@@ -52,11 +52,11 @@ So, let's focus on the former -- the instructor view. The list of items you shou
 
 | Time          | Activity         |
 | :------------ | :--------------- |
-| 09:00 - 10:30 | Welcome +  [Curriculum design](/blob/master/materials/01-curriculum-design/README.md) |
+| 09:00 - 10:30 | Welcome +  [Curriculum design](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/01-curriculum-design) |
 | 10:30 - 11:00 | :coffee: *Coffee break*   |
-| 11:00 - 12:30 | [Teaching the tidyverse](/materials/02-teach-tidyverse/) |
+| 11:00 - 12:30 | [Teaching the tidyverse](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/02-teach-tidyverse) |
 | 12:00 - 13:30 | :fork_and_knife: *Lunch break*    |
-| 13:30 - 15:00 | [Computing infrastructure: RStudio Cloud](/materials/03-rstudio-cloud/) |
+| 13:30 - 15:00 | [Computing infrastructure: RStudio Cloud](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/03-rstudio-cloud/) |
 | 15:00 - 15:30 | :coffee: *Coffee break*   |
 | 15:30 - 17:00 | Reproducible workflows: R Markdown, Git, GitHub |
 
