@@ -1,0 +1,154 @@
+---
+title: "Tutorial"
+output: 
+  learnr::tutorial:
+    fig_caption: no
+    progressive: true
+    allow_skip: true
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+# load packages
+library(learnr)
+library(tidyverse)
+
+# don't echo chunks
+knitr::opts_chunk$set(echo = FALSE)
+
+# code checking
+checker <- function(label, user_code, check_code, envir_result, evaluate_result, ...) {
+  list(message = check_code, correct = TRUE, location = "append")
+}
+tutorial_options(exercise.timelimit = 10, exercise.checker = checker)
+```
+
+## Topic 1
+
+Hello, today we learn about `learnr`.
+
+![Typo and Dorianne Gray](images/cats.jpg)
+
+![Data science cycle](https://afit-r.github.io/public/images/data-science.png)
+
+Some math: $a^2 + b^2 = c^2$.
+
+### Exercise 
+
+*Here's a simple exercise with an empty code chunk provided for entering the answer.*
+
+Write the R code required to add two plus two:
+
+```{r two-plus-two, exercise=TRUE}
+
+```
+
+### Exercise with Code
+
+*Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
+
+Now write a function that adds any two numbers and then call it:
+
+```{r add-function, exercise=TRUE, exercise.lines = 5}
+add <- function() {
+  
+}
+```
+
+## Topic 2
+
+### Exercise with Hint
+
+*Here's an exercise where the chunk is pre-evaulated via the `exercise.eval` option (so the user can see the default output we'd like them to customize). We also add a "hint" to the correct solution via the chunk immediate below labeled `print-limit-hint`.*
+
+Modify the following code to limit the number of rows printed to 5:
+
+```{r print-limit, exercise=TRUE, exercise.eval=TRUE}
+mtcars
+```
+
+```{r print-limit-hint}
+head(mtcars)
+```
+
+## Topic 3
+
+### Exercise checking
+
+You can use the `count` function to count the number of observations in each level of a categorical variable.
+
+How many automatic and how many manual transmission cars are in the data?
+
+```{r filter, exercise=TRUE}
+
+```
+
+```{r filter-solution}
+mtcars %>%
+  count(am)
+```
+
+```{r filter-check}
+"Great job!"
+```
+
+## Quiz
+
+*You can include any number of single or multiple choice questions as a quiz. Use the `question` function to define a question and the `quiz` function for grouping multiple questions together.*
+
+Some questions to verify that you understand the purposes of various base and recommended R packages:
+
+```{r quiz}
+quiz(
+  question("Which package contains functions for installing other R packages?",
+    answer("base"),
+    answer("tools"),
+    answer("utils", correct = TRUE),
+    answer("codetools")
+  ),
+  question("Which of the R packages listed below are used to create plots?",
+    answer("lattice", correct = TRUE),
+    answer("tools"),
+    answer("stats"),
+    answer("grid", correct = TRUE)
+  )
+)
+```
+
+```{r var-types}
+question(
+  "Which of the following is a numerical variable?",
+  answer("zip code", message = "Zip code is recoded using numbers, but it's not a numerical variable."),
+  answer("height"),
+  answer("handedness", correct = TRUE),
+  allow_retry = TRUE,
+  correct = "Fantastico!"
+)
+```
+
+## Videos
+
+![](https://www.youtube.com/watch?v=K0QZ9_4w0HU){width="90%"}
+
+## Shiny
+
+```{r, echo = FALSE}
+sliderInput(
+  "binwidth", 
+  "Binwidth:", 
+  min = 1, max = 30, value = 3
+  )
+plotOutput("hist")
+```
+
+```{r, context = "server"}
+output$hist <- renderPlot({
+  ggplot(data = mtcars, aes(x = mpg)) +
+    geom_histogram(binwidth = input$binwidth) +
+    labs(
+      x = "Miles per gallon",
+      y = "Frequency",
+      title = "Distribution of MPG"
+    )
+})
+```
