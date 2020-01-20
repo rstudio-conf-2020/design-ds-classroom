@@ -63,7 +63,7 @@ So, let's focus on the former -- the instructor view. The list of items you shou
 | 15:00 - 15:30 | :coffee: *Coffee break*   |
 | 15:30 - 17:00 | [Reproducible workflows: R Markdown, Git, GitHub](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/04-github) |
 
-### Day 2 - Monday, Jan 28
+### Day 2 - Tuesday, Jan 20
 
 | Time          | Activity         |
 | :------------ | :--------------- |
