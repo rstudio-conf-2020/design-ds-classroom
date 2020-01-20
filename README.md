@@ -52,7 +52,7 @@ So, let's focus on the former -- the instructor view. The list of items you shou
 
 | Time          | Activity         |
 | :------------ | :--------------- |
-| 09:00 - 10:30 | Welcome +  [Curriculum design](/materials/01-curriculum-design/) |
+| 09:00 - 10:30 | Welcome +  [Curriculum design](/blob/master/materials/01-curriculum-design/README.md) |
 | 10:30 - 11:00 | :coffee: *Coffee break*   |
 | 11:00 - 12:30 | [Teaching the tidyverse](/materials/02-teach-tidyverse/) |
 | 12:00 - 13:30 | :fork_and_knife: *Lunch break*    |
