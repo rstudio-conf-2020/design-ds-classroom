@@ -56,21 +56,24 @@ So, let's focus on the former -- the instructor view. The list of items you shou
 | 10:30 - 11:00 | :coffee: *Coffee break*   |
 | 11:00 - 12:30 | [Teaching the tidyverse](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/02-teach-tidyverse) |
 | 12:00 - 13:30 | :fork_and_knife: *Lunch break*    |
-| 13:30 - 15:00 | [Computing infrastructure: RStudio Cloud](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/03-rstudio-cloud/) |
+| 13:30 - 15:00 | [Computing infrastructure: RStudio Cloud](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/03-rstudio-cloud) |
+
+
+
 | 15:00 - 15:30 | :coffee: *Coffee break*   |
-| 15:30 - 17:00 | [Reproducible workflows: R Markdown, Git, GitHub](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/04-github/) |
+| 15:30 - 17:00 | [Reproducible workflows: R Markdown, Git, GitHub](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/04-github) |
 
 ### Day 2 - Monday, Jan 28
 
 | Time          | Activity         |
 | :------------ | :--------------- |
-| 09:00 - 10:30 | [Getting more out of GitHub](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/05-more-github/) |
+| 09:00 - 10:30 | [Getting more out of GitHub](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/05-more-github) |
 | 10:30 - 11:00 | :coffee: *Coffee break*   |
-| 11:00 - 12:30 | [Interactivity and immediate feedback](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/06-learnr/) |
+| 11:00 - 12:30 | [Interactivity and immediate feedback](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/06-learnr) |
 | 12:00 - 13:30 | :fork_and_knife: *Lunch break*    |
-| 13:30 - 15:00 | [#rstats lifehacks for instructors](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/07-lifehacks/) |
+| 13:30 - 15:00 | [#rstats lifehacks for instructors](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/07-lifehacks) |
 | 15:00 - 15:30 | :coffee: *Coffee break*   |
-| 15:30 - 17:00 | [Case studuies](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/08-case-studies/) + wrap up   |
+| 15:30 - 17:00 | [Case studuies](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/08-case-studies) + wrap up   |
 
 ## Instructor
 
