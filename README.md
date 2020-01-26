@@ -52,7 +52,7 @@ Finally, specific to this workshop:
   
 ```
 install.packages("devtools", "tidyverse", "unvotes", 
-                 "rvest")
+                 "rvest", "DT")
 ```
 
   - From GitHub:
