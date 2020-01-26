@@ -46,6 +46,22 @@ So, let's focus on the former -- the instructor view. The list of items you shou
 - [Create and save a GitHub Personal Access Token (PAT)](https://happygitwithr.com/credential-caching.html#credential-caching)
 - [Prove RStudio can find local Git and, therefore, can talk to GitHub](https://happygitwithr.com/rstudio-git-github.html#rstudio-git-github)
 
+Finally, specific to this workshop:
+- Install and load the following packages:
+  - From CRAN:
+  
+```
+install.packages("devtools", "tidyverse", "unvotes", "rvest")
+```
+
+  - From GitHub:
+  
+```
+library(devtools)
+install_github("rundel/ghclass")
+```
+
+
 ## Useful links
 
 - RStudio Cloud workspace: [rstd.io/design-ds-cloud](https://rstd.io/design-ds-cloud)
