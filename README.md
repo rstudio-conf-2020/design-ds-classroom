@@ -46,6 +46,10 @@ So, let's focus on the former -- the instructor view. The list of items you shou
 - [Create and save a GitHub Personal Access Token (PAT)](https://happygitwithr.com/credential-caching.html#credential-caching)
 - [Prove RStudio can find local Git and, therefore, can talk to GitHub](https://happygitwithr.com/rstudio-git-github.html#rstudio-git-github)
 
+## Useful links
+
+- RStudio Cloud workspace: [rstd.io/design-ds-cloud](https://rstd.io/design-ds-cloud)
+
 ## Schedule
 
 ### Day 1 - Monday, Jan 27
