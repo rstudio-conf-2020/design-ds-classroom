@@ -52,7 +52,7 @@ Finally, specific to this workshop:
   
 ```
 install.packages("devtools", "tidyverse", "unvotes", 
-                 "rvest", "DT")
+                 "rvest", "DT", "nycflights13", "gapminder")
 ```
 
   - From GitHub:
