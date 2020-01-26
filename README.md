@@ -51,7 +51,8 @@ Finally, specific to this workshop:
   - From CRAN:
   
 ```
-install.packages("devtools", "tidyverse", "unvotes", "rvest")
+install.packages("devtools", "tidyverse", "unvotes", 
+                 "rvest")
 ```
 
   - From GitHub:
