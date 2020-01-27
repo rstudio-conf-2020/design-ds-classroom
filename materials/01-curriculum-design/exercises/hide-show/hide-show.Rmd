@@ -1,0 +1,39 @@
+---
+title: "Hide / Show"
+subtitle: "Designing the Data Science Classroom"
+output: html_document
+---
+  
+The following code is used to create the multivariate visualisation we saw earlier. How much of the code would you show/hide when **just starting teaching ggplot2**?
+
+When done, compare notes with your neighbors. 
+
+```{r load-packages, message=FALSE}
+library(tidyverse)
+library(unvotes)
+```
+
+```{r unvotes-multivariate, fig.height=8}
+un_votes %>%
+  filter(country %in% c("United States of America")) %>%
+  inner_join(un_roll_calls, by = "rcid") %>%
+  inner_join(un_roll_call_issues, by = "rcid") %>%
+  mutate(
+    importantvote = ifelse(importantvote == 0, "No", "Yes"),
+    issue = ifelse(issue == "Nuclear weapons and nuclear material", "Nuclear weapons and materials", issue)
+    ) %>%
+  ggplot(aes(x = importantvote, fill = vote)) +
+  geom_bar(position = "fill") +
+  facet_wrap(~ issue, ncol = 1) +
+  labs(
+    title = "How the US voted in the UN",
+    subtitle = "By issue and importance of vote",
+    x = "Important vote", y = "", fill = "Vote"
+  ) +
+  coord_flip() +
+  theme_minimal()
+```
+
+
+---
+
