@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>&gt; 01   &gt; curriculum design</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="dr. mine çetinkaya-rundel" />
+    <meta name="date" content="2020-01-27" />
+    <link href="libs/font-awesome/css/all.css" rel="stylesheet" />
+    <link href="libs/font-awesome/css/v4-shims.css" rel="stylesheet" />
+    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
+    <script src="libs/pymjs/pym.v1.js"></script>
+    <script src="libs/widgetframe-binding/widgetframe.js"></script>
+    <link href="libs/countdown/countdown.css" rel="stylesheet" />
+    <script src="libs/countdown/countdown.js"></script>
+    <link rel="stylesheet" href="../../xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="../../slides-style.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# &gt; 01 <br> &gt; curriculum design
+## 🍰 start with cake! <br> 🔗 <a href="https://rstd.io/design-ds-class">rstd.io/design-ds-class</a>
+### dr. mine çetinkaya-rundel
+### 27 jan 2020
+
+---
+
+
+
+
+
+layout: true
+  
+&lt;div class="my-footer"&gt;
+&lt;span&gt;
+Dr. Mine Çetinkaya-Rundel - &lt;a href="https://rstd.io/design-ds-class" target="_blank"&gt;rstd.io/design-ds-class&lt;/a&gt;
+&lt;/span&gt;
+&lt;/div&gt; 
+
+---
+
+
+
+class: middle, inverse
+
+## Imagine you’re new to baking, and you’re in a baking class. I’m going to present two options for starting the class. Which one gives you **better sense** of the final product?
+
+---
+
+background-image: url("img/cake-ingredients.png")
+background-size: cover
+
+&gt;### Today we’re going to make a 
+&gt;### pineapple and coconut sandwich 
+&gt;### sponge cake with these ingredients
+
+---
+
+background-image: url("img/cake-result.png")
+background-size: cover
+
+&gt;### Today we’re going to 
+&gt;### make a pineapple and 
+&gt;### coconut sandwich 
+&gt;### sponge cake with 
+&gt;### these ingredients
+
+---
+
+class: middle, inverse
+
+## .hand[ Ok, hold on to that thought! ]
+
+---
+
+class: middle
+
+.pull-left-narrow[
+  .huge-blue-number[2]
+]
+.pull-right-wide[
+  .larger[
+  design
+  foundations
+  ]
+]
+
+---
+
+### .pink[ design foundation 1: ]
+
+## backwards design
+
+Set goals for educational curriculum before choosing instructional methods + forms of assessment^[Wiggins, Grant P., Grant Wiggins, and Jay McTighe. Understanding by design. Ascd, 2005.]
+
+1. Identify desired results
+1. Determine acceptable evidence
+1. Plan learning experiences and instruction
+
+---
+
+## designing backwards
+
+1. Identify desired **data analysis** results
+1. Determine **building blocks**
+1. Plan learning experiences and instruction
+
+---
+
+### .pink[ design foundation 2: ]
+
+## 2016 Guidelines for Assessment and Instruction in Statistics Education (GAISE)
+
+1. Teach statistical thinking.  
+  - Teach statistics as an investigative process of problem-solving and decision making.
+  - Give students experience with multivariable thinking [...] to answer challenging questions that require them to investigate and explore relationships among many variables.
+1. Focus on conceptual understanding. 
+1. Integrate real data with a context and purpose.
+1. Foster active learning.
+1. Use technology to explore concepts and analyse data.
+1. Use assessments to improve and evaluate student learning. 
+
+.footnote[
+amstat.org/asa/files/pdfs/GAISE/GaiseCollege_Full.pdf
+]
+
+---
+
+## 2016 GAISE
+
+.pull-left-wide[
+1. Teach **statistical thinking**.  
+  - Teach statistics as an investigative process of problem-solving and decision making.
+  - Give students experience with multivariable thinking [...] to answer challenging questions that require them to investigate and explore relationships among many variables.
+1. Focus on conceptual understanding. 
+1. Integrate real data with a context and purpose.
+1. Foster active learning.
+1. Use technology to explore concepts and analyse data.
+1. Use assessments to improve and evaluate student learning.
+]
+.pull-right-narrow[
+.hand-blue[
+NOT a commonly used subset of tests and intervals and produce them with hand calculations
+]
+]
+
+---
+
+## 2016 GAISE
+
+.pull-left-wide[
+1. Teach statistical thinking.  
+  - Teach statistics as an investigative process of problem-solving and decision making.
+  - Give students experience with multivariable thinking [...] to answer challenging questions that require them to **investigate and explore relationships among many variables**.
+1. Focus on conceptual understanding. 
+1. Integrate real data with a context and purpose.
+1. Foster active learning.
+1. Use technology to explore concepts and analyse data.
+1. Use assessments to improve and evaluate student learning.
+]
+.pull-right-narrow[
+.hand-blue[
+Multivariate analysis requires the use of computing
+]
+]
+
+---
+
+## 2016 GAISE
+
+.pull-left-wide[
+1. Teach statistical thinking.  
+  - Teach statistics as an investigative process of problem-solving and decision making.
+  - Give students experience with multivariable thinking [...] to answer challenging questions that require them to investigate and explore relationships among many variables.
+1. Focus on conceptual understanding. 
+1. Integrate real data with a context and purpose.
+1. Foster active learning.
+1. **Use technology** to explore concepts and analyse data.
+1. Use assessments to improve and evaluate student learning.
+]
+.pull-right-narrow[
+.hand-blue[
+NOT use technology that is only applicable in the intro course or that doesn’t follow good science principles
+]
+]
+
+---
+
+## 2016 GAISE
+
+.pull-left-wide[
+1. Teach statistical thinking.  
+  - Teach statistics as an investigative process of problem-solving and decision making.
+  - Give students experience with multivariable thinking [...] to answer challenging questions that require them to investigate and explore relationships among many variables.
+1. Focus on conceptual understanding. 
+1. Integrate real data with a context and purpose.
+1. Foster active learning.
+1. Use technology to explore concepts and **analyse data**.
+1. Use assessments to improve and evaluate student learning.
+]
+.pull-right-narrow[
+.hand-blue[
+Data analysis isn’t just inference and modelling, it’s also data importing, cleaning, preparation, exploration, and visualization
+]
+]
+
+---
+
+class: middle, inverse
+
+## .hand[ So, where do we go with all this? ]
+
+---
+
+<div id="htmlwidget-cd730d7db73d03839427" style="width:100%;height:60%;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-cd730d7db73d03839427">{"x":{"url":"01-curriculum-design_files/figure-html//widgets/widget_topic-flow-diagram.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+
+.midi[
+  .four-column[fundamentals of data &amp; data viz, confounding, Simpson’s paradox + R / RStudio, R Markdown, simple Git]
+  .four-column[tidy data, data frames vs. summary tables, recoding &amp; transforming, web scraping &amp; iteration + collaboration on GitHub]
+  .four-column[building &amp; selecting models, visualising interactions, prediction &amp; validation, inference via simulation]
+  .four-column[data science ethics, text analysis / Shiny / Bayesian inference / ... + communication &amp; dissemination]
+]
+
+---
+
+.discussion[
+Discuss in groups of three and then as a large group.
+
+- What are your first reactions to the curriculum we just described for an intro data science course? 
+- Which components can you see yourself (or do you already) include in an intro data science curriculum?
+- Which components do you have reservations about, and why?
+]
+
+<div class="countdown" id="timer_5e2e8cc6" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+
+---
+
+.pull-left-narrow[
+  .huge-blue-number[5]
+]
+.pull-right-wide[
+  .larger[
+  design
+  principles
+  ]
+]
+
+---
+
+class: middle, inverse
+
+## Which kitchen would you rather bake in? 
+
+.pull-left[
+&lt;img src="img/kitchen-inrepair.png" width="512" /&gt;
+]
+.pull-right[
+&lt;img src="img/kitchen-built.png" width="512" /&gt;
+]
+
+---
+
+class: middle, inverse
+
+## Which kitchen would you rather bake in?
+
+.pull-left[
+&lt;img src="01-curriculum-design_files/figure-html/kitchen-inrepair-xed-1.png" width="512" /&gt;
+]
+.pull-right[
+&lt;img src="01-curriculum-design_files/figure-html/kitchen-built-selected-1.png" width="544" /&gt;
+]
+
+---
+
+.pull-left-wide[
+  .right[
+  .larger[
+  cherish  
+  day  
+  one  
+  ]  
+  ]
+]
+.pull-right-narrow[
+  .huge-pink-number[1]
+]
+
+---
+
+.pull-left[
+&lt;img src="img/kitchen-inrepair.png" width="512" height="250" /&gt;
+- Install R
+- Install RStudio
+- Install the following packages:
+  - tidyverse
+  - rmarkdown
+  - ...
+- Load these packages
+- Install git
+]
+.pull-right[
+&lt;img src="img/kitchen-built.png" width="512" height="250" /&gt;
+- Go to rstudio.cloud (or some other server based solution)
+- Log in with your ID &amp; pass
+
+```r
+&gt; hello R!
+```
+]
+
+---
+
+class: middle, center
+
+[minecr.shinyapps.io/unvotes](https://minecr.shinyapps.io/unvotes/)
+
+[&lt;img src="img/unvotes-app.png" width="906" /&gt;](https://minecr.shinyapps.io/unvotes/)
+
+---
+
+class: middle, center
+
+&lt;iframe width="1200" height="630" src="https://www.youtube.com/embed/2ka00b9A0TA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+---
+
+.your-turn[
+- Go to [rstd.io/design-ds-cloud](https://rstd.io/design-ds-cloud) to join the RStudio Cloud workspace for this workshop
+- Start the **assignment** called **01 - Curriculum Design**
+- Open the R Markdown document called `un-votes.Rmd`, knit the document, view the result
+- Then, change "Turkey" to another country, and knit again.
+- When you're done with the exercise, discuss with your neighbours: 
+  - What worked? What didn't? 
+  - What would you add to the instructions? What would you take away?
+]
+
+<div class="countdown" id="timer_5e2e8c4b" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+
+---
+
+class: middle, inverse
+
+## How do you prefer your cake recipes? Words only, or words &amp; pictures?
+
+.pull-left[
+&lt;img src="img/recipe-picture.png" width="512" /&gt;
+]
+.pull-right[
+&lt;img src="img/recipe-words.png" width="512" /&gt;
+]
+
+---
+
+class: middle, inverse
+
+## How do you prefer your cake recipes? Words only, or words &amp; pictures?
+
+.pull-left[
+&lt;img src="01-curriculum-design_files/figure-html/recipe-picture-selected-1.png" width="544" /&gt;
+]
+.pull-right[
+&lt;img src="01-curriculum-design_files/figure-html/recipe-words-xed-1.png" width="512" /&gt;
+]
+
+---
+
+.pull-left-wide[
+  .right[
+  .larger[
+  start  
+  with  
+  cake  
+  ]  
+  ]
+]
+.pull-right-narrow[
+  .huge-pink-number[2]
+]
+
+---
+
+.pull-left[
+&lt;img src="img/recipe-picture.png" width="250" height="150" style="display: block; margin: auto;" /&gt;
+- Open today's demo project
+- Knit the document and discuss the visualisation you made with your neighbor
+- Then, change `Turkey` to a different country, and plot again
+]
+.pull-right[
+&lt;img src="img/recipe-words.png" width="250" height="150" style="display: block; margin: auto;" /&gt;
+.small[
+
+```r
+x &lt;- 8
+y &lt;- "monkey"
+z &lt;- FALSE
+
+class(x)
+```
+
+```
+## [1] "numeric"
+```
+
+```r
+class(y)
+```
+
+```
+## [1] "character"
+```
+
+```r
+class(z)
+```
+
+```
+## [1] "logical"
+```
+]
+]
+
+---
+
+class: middle
+
+## .hand[ with with great examples, ]
+## .hand[ comes a great amount of code... ]
+
+---
+
+class: middle
+
+## .hand[ but let’s focus on the task at hand... ]
+
+- Open today's demo project
+- Knit the document and discuss the visualisation you made with your neighbor
+- Then, **.pink[ change `Turkey` to a different country, and plot again]**
+
+---
+
+.small[
+
+```r
+un_votes %&gt;%
+  filter(country %in% c("United States of America", "Turkey")) %&gt;%
+  inner_join(un_roll_calls, by = "rcid") %&gt;%
+  inner_join(un_roll_call_issues, by = "rcid") %&gt;%
+  mutate(issue = ifelse(issue == "Nuclear weapons and nuclear material",
+                        "Nuclear weapons and materials", issue)) %&gt;%
+  group_by(country, year = year(date), issue) %&gt;%
+  summarize(
+    votes = n(),
+    percent_yes = mean(vote == "yes")
+    ) %&gt;%
+  filter(votes &gt; 5) %&gt;%
+  ggplot(mapping = aes(x = year, y = percent_yes, color = country)) +
+    geom_point() +
+    geom_smooth(method = "loess", se = FALSE) +
+    facet_wrap(~ issue) +
+    labs(
+      title = "Percentage of Yes votes in the UN General Assembly",
+      subtitle = "1946 to 2015",
+      y = "% Yes",
+      x = "Year",
+      color = "Country"
+    )
+```
+]
+
+---
+
+.midi[
+
+```r
+un_votes %&gt;%
+* filter(country %in% c("United States of America", "Turkey")) %&gt;%
+  inner_join(un_roll_calls, by = "rcid") %&gt;%
+  inner_join(un_roll_call_issues, by = "rcid") %&gt;%
+  group_by(country, year = year(date), issue) %&gt;%
+  summarize(
+    votes = n(),
+    perc_yes = mean(vote == "yes")
+    ) %&gt;%
+  filter(votes &gt; 5) %&gt;%
+  ggplot(mapping = aes(x = year, y = perc_yes, color = country)) +
+    geom_point() +
+    geom_smooth(method = "loess", se = FALSE) +
+    facet_wrap(~ issue) +
+    labs(
+      title = "Percentage of Yes votes in the UN General Assembly",
+      subtitle = "1946 to 2015",
+      y = "% Yes", x = "Year", color = "Country"
+    )
+```
+]
+
+---
+
+.midi[
+
+```r
+un_votes %&gt;%
+* filter(country %in% c("United States of America", "France")) %&gt;%
+  inner_join(un_roll_calls, by = "rcid") %&gt;%
+  inner_join(un_roll_call_issues, by = "rcid") %&gt;%
+  group_by(country, year = year(date), issue) %&gt;%
+  summarize(
+    votes = n(),
+    perc_yes = mean(vote == "yes")
+    ) %&gt;%
+  filter(votes &gt; 5) %&gt;%
+  ggplot(mapping = aes(x = year, y = perc_yes, color = country)) +
+    geom_point() +
+    geom_smooth(method = "loess", se = FALSE) +
+    facet_wrap(~ issue) +
+    labs(
+      title = "Percentage of Yes votes in the UN General Assembly",
+      subtitle = "1946 to 2015",
+      y = "% Yes", x = "Year", color = "Country"
+    )
+```
+]
+
+---
+
+.your-turn[
+### 01 - Curriculum design / `start-with-cake.Rmd`
+
+- Your challenge is to go from nothing to a data visualisation in 15 minutes of your first class. Don't worry about the computing infrastructure (we'll get to that later in the day), assume students have successfully landed in RStudio Cloud like you did earlier. Design an exercise for them to "create" their first visualisation.
+- If you need inspiration, you can use the `ggplot2::diamonds` or `dplyr::starwars` dataset or any dataset from `nycflights13` or `gapminder` packages.
+- If you already have a first day exercise you like, you're welcomed to modify it to fit the challenge: from nothing to a data visualisation in 15 minutes!
+- Compare notes with neighbors. 
+]
+
+<div class="countdown" id="timer_5e2e8bfb" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+
+class: middle, inverse
+
+## Which motivates you more to learn how to cook: perfectly chopped onions or ratatouille?
+
+.pull-left[
+&lt;img src="img/chop-onions.png" width="512" /&gt;
+]
+.pull-right[
+&lt;img src="img/make-ratatouille.png" width="512" /&gt;
+]
+
+---
+
+class: middle, inverse
+
+## Which motivates you more to learn how to cook: perfectly chopped onions or ratatouille?
+
+.pull-left[
+&lt;img src="01-curriculum-design_files/figure-html/chop-onions-xed-1.png" width="512" /&gt;
+]
+.pull-right[
+&lt;img src="01-curriculum-design_files/figure-html/make-ratatouille-selected-1.png" width="544" /&gt;
+]
+
+---
+
+.pull-left-wide[
+  .right[
+  .larger[
+  skip  
+  baby  
+  steps  
+  ]  
+  ]
+]
+.pull-right-narrow[
+  .huge-pink-number[3]
+]
+
+---
+
+.pull-left[
+&lt;img src="img/chop-onions.png" width="250" height="150" style="display: block; margin: auto;" /&gt;
+![](01-curriculum-design_files/figure-html/unvotes-univariate-1.png)&lt;!-- --&gt;
+]
+.pull-right[
+&lt;img src="img/make-ratatouille.png" width="250" height="150" style="display: block; margin: auto;" /&gt;
+.small[
+![](01-curriculum-design_files/figure-html/unvotes-multivariate-1.png)&lt;!-- --&gt;
+]
+]
+
+---
+
+class: middle
+
+## .hand[ non-trivial examples can be motivating, ]
+## .hand[ but need to avoid ] 👇
+
+.pull-left[
+&lt;img src="img/owl-step1.png" width="250" height="390" style="display: block; margin: auto 0 auto auto;" /&gt;
+]
+.pull-right[
+&lt;img src="img/owl-step2.png" width="250" height="390" style="display: block; margin: auto auto auto 0;" /&gt;
+]
+
+---
+
+class: middle
+
+.center[
+.three-column[
+&lt;img src="img/owl-step1.png" width="250" height="400" /&gt;
+]
+.three-column[
+## .center[ .hand[ scaffold + layer ] ]
+]
+.three-column[
+&lt;img src="img/owl-step2.png" width="250" height="400" /&gt;
+]
+]
+
+---
+
+.your-turn[
+### 01 - Curriculum design / `hide-show.Rmd`
+
+The following code is used to create the multivariate visualisation we saw earlier. How much of the code would you show/hide when just starting teaching ggplot2?
+]
+
+.tiny[
+
+```r
+un_votes %&gt;%
+  filter(country %in% c("United States of America")) %&gt;%
+  inner_join(un_roll_calls, by = "rcid") %&gt;%
+  inner_join(un_roll_call_issues, by = "rcid") %&gt;%
+  mutate(
+    importantvote = ifelse(importantvote == 0, "No", "Yes"),
+    issue = ifelse(issue == "Nuclear weapons and nuclear material", "Nuclear weapons and materials", issue)
+    ) %&gt;%
+  ggplot(aes(x = importantvote, fill = vote)) +
+  geom_bar(position = "fill") +
+  facet_wrap(~ issue, ncol = 1) +
+  labs(
+    title = "How the US voted in the UN", 
+    subtitle = "By issue and importance of vote",
+    x = "Important vote", y = "", fill = "Vote"
+    ) +
+  coord_flip() +
+  theme_minimal() +
+  scale_fill_viridis_d(option = "E")
+```
+]
+
+<div class="countdown" id="timer_5e2e8d8e" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+
+## Designining code snippets for teaching
+
+- Write it out to your heart's desire and polish it
+
+--
+
+- Then, split into three parts:
+  - 📦 **Pre-process:** Required, but isn't directly connected to / far off from learning goals of current lesson
+  - 💔 **Stash:** Not required, and not directly connected to learning goals of current lesson 
+    - Likely concepts that fit better into future lessons)
+  - ✅ **Feature:** Heart of the lesson (and maybe a review of a previous lessons)
+  
+- Finally, decide on the pace at which to scaffold and layer
+
+---
+
+## 📦 Pre-process
+
+We'll call the highlighted lines `us_votes`
+
+.small[
+
+```r
+*un_votes %&gt;%
+* filter(country %in% c("United States of America")) %&gt;%
+* inner_join(un_roll_calls, by = "rcid") %&gt;%
+* inner_join(un_roll_call_issues, by = "rcid") %&gt;%
+* mutate(
+*   importantvote = ifelse(importantvote == 0, "No", "Yes"),
+*   issue = ifelse(issue == "Nuclear weapons and nuclear material", "Nuclear weapons and materials", issue)
+*   ) %&gt;%
+  ggplot(aes(x = importantvote, fill = vote)) +
+  geom_bar(position = "fill") +
+  facet_wrap(~ issue, ncol = 1) +
+  labs(
+    title = "How the US voted in the UN", 
+    subtitle = "By issue and importance of vote",
+    x = "Important vote", y = "", fill = "Vote"
+    ) +
+  coord_flip() +
+  theme_minimal() +
+  scale_fill_viridis_d(option = "E")
+```
+]
+
+---
+
+
+
+.small[
+
+```r
+us_votes
+```
+
+```
+## # A tibble: 5,256 x 14
+##     rcid country country_code vote  session importantvote date      
+##    &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;        &lt;fct&gt;   &lt;dbl&gt; &lt;chr&gt;         &lt;date&gt;    
+##  1     6 United… US           no          1 No            1946-01-04
+##  2     8 United… US           no          1 No            1946-01-05
+##  3    11 United… US           yes         1 No            1946-02-05
+##  4    18 United… US           no          1 No            1946-02-03
+##  5    19 United… US           yes         1 No            1946-02-03
+##  6    24 United… US           yes         1 No            1946-12-05
+##  7    26 United… US           no          1 No            1946-12-06
+##  8    27 United… US           yes         1 No            1946-12-06
+##  9    28 United… US           yes         1 No            1946-12-06
+## 10    29 United… US           yes         1 No            1946-12-06
+## # … with 5,246 more rows, and 7 more variables: unres &lt;chr&gt;,
+## #   amend &lt;dbl&gt;, para &lt;dbl&gt;, short &lt;chr&gt;, descr &lt;chr&gt;,
+## #   short_name &lt;chr&gt;, issue &lt;chr&gt;
+```
+]
+
+---
+
+## 💔 **Stash:**
+
+.small[
+
+```r
+un_votes %&gt;%
+  filter(country %in% c("United States of America")) %&gt;%
+  inner_join(un_roll_calls, by = "rcid") %&gt;%
+  inner_join(un_roll_call_issues, by = "rcid") %&gt;%
+  mutate(
+    importantvote = ifelse(importantvote == 0, "No", "Yes"),
+    issue = ifelse(issue == "Nuclear weapons and nuclear material", "Nuclear weapons and materials", issue)
+    ) %&gt;%
+  ggplot(aes(x = importantvote, fill = vote)) +
+  geom_bar(position = "fill") +
+  facet_wrap(~ issue, ncol = 1) +
+  labs(
+    title = "How the US voted in the UN", 
+    subtitle = "By issue and importance of vote",
+    x = "Important vote", y = "", fill = "Vote"
+    ) +
+  coord_flip() +
+* theme_minimal() +
+* scale_fill_viridis_d(option = "E")
+```
+]
+
+---
+
+## ✅ Feature
+
+
+```r
+us_votes %&gt;%
+  ggplot(aes(x = importantvote, fill = vote)) +
+  geom_bar(position = "fill") +
+  facet_wrap(~ issue, ncol = 1) +
+  labs(
+    title = "How the US voted in the UN", 
+    subtitle = "By issue and importance of vote",
+    x = "Important vote", y = "", fill = "Vote"
+    ) +
+  coord_flip()
+```
+
+---
+
+.pull-left[
+
+```r
+*ggplot(data = us_votes)
+```
+]
+.pull-right[
+![](01-curriculum-design_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+]
+
+---
+
+.pull-left[
+.small[
+
+```r
+ggplot(data = us_votes, 
+* mapping = aes(x = importantvote,
+*               fill = vote))
+```
+]
+]
+.pull-right[
+![](01-curriculum-design_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
+]
+
+---
+
+.pull-left[
+.small[
+
+```r
+ggplot(data = us_votes, 
+  mapping = aes(x = importantvote, 
+                fill = vote)) +
+* geom_bar(position = "fill")
+```
+]
+]
+.pull-right[
+![](01-curriculum-design_files/figure-html/unnamed-chunk-11-1.png)&lt;!-- --&gt;
+]
+
+---
+
+.pull-left[
+.small[
+
+```r
+ggplot(data = us_votes, 
+  mapping = aes(x = importantvote, 
+                fill = vote)) +
+  geom_bar(position = "fill") +
+* facet_wrap(~ issue, ncol = 1)
+```
+]
+]
+.pull-right[
+![](01-curriculum-design_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
+]
+
+---
+
+.pull-left[
+.small[
+
+```r
+ggplot(data = us_votes, 
+  mapping = aes(x = importantvote, 
+                fill = vote)) +
+  geom_bar(position = "fill") +
+  facet_wrap(~ issue, ncol = 1) +
+* labs(
+*   title = "How the US voted in the UN",
+*   subtitle = "By issue and importance of vote",
+*   x = "Important vote",
+*   y = ""
+*   )
+```
+]
+]
+.pull-right[
+![](01-curriculum-design_files/figure-html/unnamed-chunk-13-1.png)&lt;!-- --&gt;
+]
+
+---
+
+.pull-left[
+.small[
+
+```r
+ggplot(data = us_votes, 
+  mapping = aes(x = importantvote, 
+                fill = vote)) +
+  geom_bar(position = "fill") +
+  facet_wrap(~ issue, ncol = 1) +
+  labs(
+    title = "How the US voted in the UN",
+    subtitle = "By issue and importance of vote",
+    x = "Important vote",
+    y = "",
+*   fill = "Vote"
+    ) 
+```
+]
+]
+.pull-right[
+![](01-curriculum-design_files/figure-html/unnamed-chunk-14-1.png)&lt;!-- --&gt;
+]
+
+---
+
+.pull-left[
+.small[
+
+```r
+ggplot(data = us_votes, 
+  mapping = aes(x = importantvote, 
+                fill = vote)) +
+  geom_bar(position = "fill") +
+  facet_wrap(~ issue, ncol = 1) +
+  labs(
+    title = "How the US voted in the UN", 
+    subtitle = "By issue and importance of vote",
+    x = "Important vote", 
+    y = "", 
+    fill = "Vote"
+    ) +
+* coord_flip()
+```
+]
+]
+.pull-right[
+![](01-curriculum-design_files/figure-html/unnamed-chunk-15-1.png)&lt;!-- --&gt;
+]
+
+---
+
+## ~~Skip~~ Re-insert baby steps
+
+&lt;img src="img/learnr-visualise.png" width="992" /&gt;
+
+---
+
+class: middle, inverse
+
+## Which is more likely to appeal to someone who has never tried broccoli?
+
+.pull-left[
+&lt;img src="img/broccoli-raw.png" width="512" /&gt;
+]
+.pull-right[
+&lt;img src="img/broccoli-cooked.png" width="512" /&gt;
+]
+
+---
+
+class: middle, inverse
+
+## Which is more likely to appeal to someone who has never tried broccoli?
+
+.pull-left[
+&lt;img src="01-curriculum-design_files/figure-html/broccoli-raw-xed-1.png" width="512" /&gt;
+]
+.pull-right[
+&lt;img src="01-curriculum-design_files/figure-html/broccoli-cooked-selected-1.png" width="544" /&gt;
+]
+
+---
+
+.pull-left-wide[
+  .right[
+  .larger[
+  hide  
+  the  
+  veggies  
+  ]  
+  ]
+]
+.pull-right-narrow[
+  .huge-pink-number[4]
+]
+
+---
+
+.pull-left-narrow[
+&lt;img src="img/broccoli-raw.png" width="250" height="150" style="display: block; margin: auto;" /&gt;
+
+Today we're going to do web scraping
+- Using the **rvest** package
+- And with the help of *regular expressions*
+]
+.pull-right-wide[
+&lt;img src="img/broccoli-cooked.png" width="250" height="150" style="display: block; margin: auto;" /&gt;
+
+- Today we go from this to that
+&lt;img src="img/open-secrets-nc.png" width="687" /&gt;
+- and do so in a way that is easy to replicate for another state
+]
+
+---
+
+class: middle
+
+## .hand[ students will encounter lots of ]
+## .hand[ new challenges along the way -- ]
+## .hand[ let that happen, ]
+## .hand[ and then provide a solution ]
+
+---
+
+## Start with a mini-lecture
+
+- **Lesson:** Web scraping essentials for turning a structured table into a data frame in R.
+
+---
+
+## Follow up with a hands-on exercise
+
+- **Lesson:** Web scraping essentials for turning a structured table into a data frame in R.
+- **Ex 1:** Scrape the table off the web and save as a data frame.
+
+&lt;img src="img/open-secrets-nc-ex1.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## And a thought exercise
+
+- **Lesson:** Web scraping essentials for turning a structured table into a data frame in R.
+- **Ex 1:** Scrape the table off the web and save as a data frame.
+- **Ex 2:** What other information do we need represented as variables in the data to obtain the desired facets? 
+
+&lt;img src="img/open-secrets-nc-ex2.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+
+
+## And finally, the veggies!
+
+- **Lesson:** Web scraping essentials for turning a structured table into a data frame in R.
+- **Ex 1:** Scrape the table off the web and save as a data frame.
+- **Ex 2:** What other information do we need represented as variables in the data to obtain the desired facets? 
+- **Lesson:** “Just enough” string parsing and regular expressions to go from
+
+&lt;img src="img/open-secrets-nc-ex3.png" width="100%" /&gt;
+
+---
+
+class: middle, inverse
+
+## If you are already taking a baking class, which will be easier to venture on to?
+
+.pull-left[
+&lt;img src="img/make-pastries.png" width="512" /&gt;
+]
+.pull-right[
+&lt;img src="img/make-tacos.png" width="512" /&gt;
+]
+
+---
+
+class: middle, inverse
+
+## If you are already taking a baking class, which will be easier to venture on to?
+
+.pull-left[
+&lt;img src="01-curriculum-design_files/figure-html/make-pastries-selected-1.png" width="544" /&gt;
+]
+.pull-right[
+&lt;img src="01-curriculum-design_files/figure-html/make-tacos-xed-1.png" width="512" /&gt;
+]
+
+---
+
+.pull-left-wide[
+  .right[
+  .larger[
+  leverage  
+  the  
+  ecosystem  
+  ]  
+  ]
+]
+.pull-right-narrow[
+  .huge-pink-number[5]
+]
+
+---
+
+## Suppose...
+
+Estimate the difference between the average evaluation score of male and female faculty.
+
+
+```
+## # A tibble: 463 x 5
+##    score rank         ethnicity    gender bty_avg
+##    &lt;dbl&gt; &lt;fct&gt;        &lt;fct&gt;        &lt;fct&gt;    &lt;dbl&gt;
+##  1   4.7 tenure track minority     female    5   
+##  2   4.1 tenure track minority     female    5   
+##  3   3.9 tenure track minority     female    5   
+##  4   4.8 tenure track minority     female    5   
+##  5   4.6 tenured      not minority male      3   
+##  6   4.3 tenured      not minority male      3   
+##  7   2.8 tenured      not minority male      3   
+##  8   4.1 tenured      not minority male      3.33
+##  9   3.4 tenured      not minority male      3.33
+## 10   4.5 tenured      not minority female    3.17
+## # … with 453 more rows
+```
+
+---
+
+.pull-left[
+&lt;img src="img/make-pastries.png" width="250" height="150" style="display: block; margin: auto;" /&gt;
+.small[
+
+```r
+evals %&gt;%
+  specify(score ~ gender) %&gt;%
+  generate(reps = 1000, 
+    type = "bootstrap") %&gt;%
+  calculate(stat = "diff in means", 
+    order = c("male", "female")) %&gt;%
+  summarise(
+    l = quantile(stat, 0.025), 
+    u = quantile(stat, 0.975)
+    )
+```
+
+```
+## # A tibble: 1 x 2
+##        l     u
+##    &lt;dbl&gt; &lt;dbl&gt;
+## 1 0.0447 0.239
+```
+]
+]
+.pull-right[
+&lt;img src="img/make-tacos.png" width="250" height="150" style="display: block; margin: auto;" /&gt;
+.small[
+
+```r
+t.test(evals$score ~ evals$gender)
+```
+
+```
+## 
+## 	Welch Two Sample t-test
+## 
+## data:  evals$score by evals$gender
+## t = -2.7507, df = 398.7, p-value = 0.006218
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -0.24264375 -0.04037194
+## sample estimates:
+## mean in group female   mean in group male 
+##             4.092821             4.234328
+```
+]
+]
+
+---
+
+## infer `\(\in\)` tidymodels
+
+.pull-left-wide[
+The objective of this package is to perform statistical inference using an expressive statistical grammar that coheres with the tidyverse design framework.
+]
+.pull-right-narrow[
+&lt;img src="img/infer-hex.png" width="553" /&gt;
+]
+
+---
+
+
+```r
+evals %&gt;%
+  specify(score ~ gender)
+```
+
+```
+## Response: score (numeric)
+## Explanatory: gender (factor)
+## # A tibble: 463 x 2
+##    score gender
+##    &lt;dbl&gt; &lt;fct&gt; 
+##  1   4.7 female
+##  2   4.1 female
+##  3   3.9 female
+##  4   4.8 female
+##  5   4.6 male  
+##  6   4.3 male  
+##  7   2.8 male  
+##  8   4.1 male  
+##  9   3.4 male  
+## 10   4.5 female
+## # … with 453 more rows
+```
+
+---
+
+
+```r
+set.seed(1234)
+evals %&gt;%
+  specify(score ~ gender) %&gt;%
+  generate(reps = 1000, type = "bootstrap")
+```
+
+```
+## Response: score (numeric)
+## Explanatory: gender (factor)
+## # A tibble: 463,000 x 3
+## # Groups:   replicate [1,000]
+##    replicate score gender
+##        &lt;int&gt; &lt;dbl&gt; &lt;fct&gt; 
+##  1         1   4   female
+##  2         1   3.1 male  
+##  3         1   5   male  
+##  4         1   4.4 male  
+##  5         1   3.5 female
+##  6         1   4.5 female
+##  7         1   4.5 male  
+##  8         1   4.9 male  
+##  9         1   4.4 male  
+## 10         1   3.5 male  
+## # … with 462,990 more rows
+```
+
+---
+
+
+```r
+set.seed(1234)
+evals %&gt;%
+  specify(score ~ gender) %&gt;%
+  generate(reps = 1000, type = "bootstrap") %&gt;%
+  calculate(stat = "diff in means", order = c("male", "female"))
+```
+
+```
+## # A tibble: 1,000 x 2
+##    replicate     stat
+##        &lt;int&gt;    &lt;dbl&gt;
+##  1         1  0.230  
+##  2         2  0.134  
+##  3         3  0.100  
+##  4         4  0.230  
+##  5         5  0.128  
+##  6         6  0.201  
+##  7         7  0.168  
+##  8         8  0.130  
+##  9         9 -0.00490
+## 10        10  0.123  
+## # … with 990 more rows
+```
+
+---
+
+
+```r
+set.seed(1234)
+evals %&gt;%
+  specify(score ~ gender) %&gt;%
+  generate(reps = 1000, type = "bootstrap") %&gt;%
+  calculate(stat = "diff in means", order = c("male", "female")) %&gt;%
+  visualise()
+```
+
+![](01-curriculum-design_files/figure-html/infer-4-1.png)&lt;!-- --&gt;
+
+---
+
+
+```r
+set.seed(1234)
+evals %&gt;%
+  specify(score ~ gender) %&gt;%
+  generate(reps = 1000, type = "bootstrap") %&gt;%
+  calculate(stat = "diff in means", order = c("male", "female")) %&gt;%
+  summarise(l = quantile(stat, 0.025), u = quantile(stat, 0.975))
+```
+
+```
+## # A tibble: 1 x 2
+##        l     u
+##    &lt;dbl&gt; &lt;dbl&gt;
+## 1 0.0407 0.236
+```
+
+---
+
+## One other way to "leverage the ecosystem"
+
+Do it all in R!
+
+- Slides with **xaringan**
+- Course website with **blogdown**
+- Course notes / textbook with **bookdown**
+- A student dashboard with **flexdashboard**
+- Git automation with **ghclass**
+- Interactive tutorials with **learnr**
+- ...
+
+---
+
+class: middle
+
+.your-turn[
+Take one minute to write down one concrete change you'd like to consider making in your teaching based on what we've covered in this module.
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "solarized-light",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"slideNumberFormat": "<div class=\"progress-bar-container\">   <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">   </div> </div>`"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
