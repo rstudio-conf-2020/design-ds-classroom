@@ -22,22 +22,32 @@ output:
 ```{r child = "../../setup.Rmd"}
 ```
 
-## Workshop materials
+class: middle, center
 
-### [https://rstd.io/design-ds-class](https://rstd.io/design-ds-class)
 
-### WiFi: rstudio20 / tidyverse20
+## [rstd.io/design-ds-class](https://rstd.io/design-ds-class)
+
+<br>
+
+## WiFi: rstudio20 / tidyverse20
 
 ---
 
 ## Meet & greet
 
-### Mine Çetinkaya-Rundel
+### Instructor: Mine Çetinkaya-Rundel
 
 - Professional Educator & Data Scientist, RStudio
 - Senior Lecturer, University of Edinburgh
 - Associate Professor of the Practice, Duke Statistical Science 
 - Past Chair, Section on Statistics and Data Science Education
+
+### TAs:
+
+- Nichole Monhait (Coordinator)
+- Maria Tackett
+- Therese Anders
+- Nicole Thompson
 
 ---
 
@@ -57,6 +67,13 @@ Turn to your neighbor and introduce yourself:
 
 - [Code of Conduct](https://web.cvent.com/event/36ebe042-0113-44f1-8e36-b9bc5d0733bf/websitePage:988cd046-614c-445b-b658-1c8d83ca82b0?RefId=conference&utm_campaign=Site%20Promo&utm_medium=Ste&utm_source=ConfPage)
 - Emergency exits and other emergency info
+- Gender neutral restrooms: Gender neutral restrooms are located in Tower 3 on the Ballroom level
+- Specialty rooms: For neurologically diverse instructors and attendees, there is a chillout room in Tower 1, 4th floor among the Union Square rooms. A prayer/meditation room and a mothers’ room is also on that level.
+- Lunch: Golden Gate Foyer (Lobby Level)
+- Recordings: We do not permit personal recordings of workshops. 
+- Evening events: There is a reception each evening of the workshops -- it’s listed on your programs and in the app.
+
+
 
 ---
 
@@ -70,7 +87,7 @@ Turn to your neighbor and introduce yourself:
 
 ---
 
-## Schedule for the day
+## Schedule for today
 
 <br>
 
@@ -80,9 +97,34 @@ Turn to your neighbor and introduce yourself:
 | 10:30 - 11:00	| Coffee break |
 | 11:00 - 12:30	| Teaching the tidyverse |
 | 12:00 - 13:30	| Lunch break |
-| 13:30 - 15:00	| Computing infrastructure: RStudio Cloud |
+| 13:30 - 15:00	| Computing infrastructure with RStudio Cloud |
 | 15:00 - 15:30	| Coffee break |
-| 15:30 - 17:00	| Reproducible workflows: R Markdown, Git, GitHub |
+| 15:30 - 17:00	| Case study: Design your assignment on RStudio Cloud |
 
+---
+
+## Schedule for tomorrow
+
+<br>
+
+**Materials for Day 2 will be posted in the morning of Day 2**
+
+|               |                  |
+|---------------| -----------------|
+| 09:00 - 10:30	| Reproducible workflows: R Markdown, Git, GitHub |
+| 10:30 - 11:00	| Coffee break |
+| 11:00 - 12:30	| Getting more out of GitHub |
+| 12:00 - 13:30	| Lunch break |
+| 13:30 - 15:00	| Interactivity and immediate feedback |
+| 15:00 - 15:30	| Coffee break |
+| 15:30 - 17:00	| #rstats lifehacks for instructors + Wrap up  |
+
+---
+
+## Data collection for tomorrow
+
+.large[ 
+Please fill out the form at [rstd.io/design-ds-form](https://rstd.io/design-ds-form).
+]
 
 
