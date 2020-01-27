@@ -255,7 +255,7 @@ class: middle
 
 ## Why start with ggplot2?
 
-1. Students come in with intutition for being able to interpret data visualizations without needing much instructions. 
+1. Students come in with intuition for being able to interpret data visualizations without needing much instructions. 
   - Focus the majority of class time initially on R syntax and leave interpretations to students. 
   - Later on the scale tips -- spend more class time on concepts and results interpretations and less on R syntax.
 
@@ -771,7 +771,7 @@ sales %>%
 
 ## Ex 2. Iteration
 
-Suppose you want to repeatedly run a function (e.g. calculate manu confidence intervals).
+Suppose you want to repeatedly run a function (e.g. calculate many confidence intervals).
 
 For simplicity, let's say
 
