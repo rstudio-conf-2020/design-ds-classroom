@@ -103,7 +103,7 @@ devtools::install_github("rundel/ghclass")
 | 12:00 - 13:30 | :fork_and_knife: *Lunch break*    |
 | 13:30 - 15:00 | Interactivity and immediate feedback |
 | 15:00 - 15:30 | :coffee: *Coffee break*   |
-| 15:30 - 17:00 | #rstats lifehacks for instructors + Wrap up   |
+| 15:30 - 17:00 | #rstats lifehacks for instructors + Wrap up |
 
 ## Instructor
 
