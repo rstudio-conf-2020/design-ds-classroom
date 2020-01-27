@@ -2,14 +2,14 @@
 
 ## Learning goals
 
-- Create workspace
-- Invite members
+- Creating workspace
+- Inviting members
 - Member permissions
-- Base project
-- Create assignment
-- Collect assignment
+- Base projects
+- Creating assignment
+- Collecting assignment
 
 ## Materials
 
-- [Slides]()
-- Exercises
+- [Slides](https://rstudio-conf-2020.github.io/design-ds-classroom/materials/03-rstudio-cloud/slides/03-rstudio-cloud.html#1)
+- All exercises in the RStudio Cloud UI

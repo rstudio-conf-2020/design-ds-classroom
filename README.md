@@ -46,31 +46,64 @@ So, let's focus on the former -- the instructor view. The list of items you shou
 - [Create and save a GitHub Personal Access Token (PAT)](https://happygitwithr.com/credential-caching.html#credential-caching)
 - [Prove RStudio can find local Git and, therefore, can talk to GitHub](https://happygitwithr.com/rstudio-git-github.html#rstudio-git-github)
 
+Finally, specific to this workshop:
+- Install and load the following packages:
+  - From CRAN:
+  
+```
+install.packages("devtools")
+install.packages("DiagrammeR")
+install.packages("DT")
+install.packages("gapminder")
+install.packages("lubridate")
+install.packages("infer")
+install.packages("magick")
+install.packages("nycflights13")
+install.packages("rvest")
+install.packages("tidyverse")
+install.packages("unvotes")
+```
+
+  - From GitHub:
+  
+```
+devtools::install_github("gadenbuie/countdown")
+devtools::install_github("OpenIntroStat/openintro-r-package")
+devtools::install_github("rundel/ghclass")
+```
+
+
+## Useful links
+
+- RStudio Cloud workspace: [rstd.io/design-ds-cloud](https://rstd.io/design-ds-cloud)
+
 ## Schedule
 
 ### Day 1 - Monday, Jan 27
 
 | Time          | Activity         |
 | :------------ | :--------------- |
-| 09:00 - 10:30 | Welcome +  [Curriculum design](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/01-curriculum-design) |
+| 09:00 - 10:30 | [Welcome](https://rstudio-conf-2020.github.io/design-ds-classroom/materials/00-welcome/slides/00-welcome.html#1) +  [Curriculum design](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/01-curriculum-design) |
 | 10:30 - 11:00 | :coffee: *Coffee break*   |
 | 11:00 - 12:30 | [Teaching the tidyverse](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/02-teach-tidyverse) |
 | 12:00 - 13:30 | :fork_and_knife: *Lunch break*    |
-| 13:30 - 15:00 | [Computing infrastructure: RStudio Cloud](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/03-rstudio-cloud) |
+| 13:30 - 15:00 | [Computing infrastructure with RStudio Cloud](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/03-rstudio-cloud) |
 | 15:00 - 15:30 | :coffee: *Coffee break*   |
-| 15:30 - 17:00 | [Reproducible workflows: R Markdown, Git, GitHub](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/04-github) |
+| 15:30 - 17:00 | [Case study: Design your assignment on RStudio Cloud](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/04-case-study) |
 
 ### Day 2 - Tuesday, Jan 28
 
+**Materials for Day 2 will be posted in the morning of Day 2**
+
 | Time          | Activity         |
 | :------------ | :--------------- |
-| 09:00 - 10:30 | [Getting more out of GitHub](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/05-more-github) |
+| 09:00 - 10:30 | Reproducible workflows: R Markdown, Git, GitHub] |
 | 10:30 - 11:00 | :coffee: *Coffee break*   |
-| 11:00 - 12:30 | [Interactivity and immediate feedback](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/06-learnr) |
+| 11:00 - 12:30 | Getting more out of GitHub |
 | 12:00 - 13:30 | :fork_and_knife: *Lunch break*    |
-| 13:30 - 15:00 | [#rstats lifehacks for instructors](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/07-lifehacks) |
+| 13:30 - 15:00 | Interactivity and immediate feedback |
 | 15:00 - 15:30 | :coffee: *Coffee break*   |
-| 15:30 - 17:00 | [Case studuies](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/08-case-studies) + wrap up   |
+| 15:30 - 17:00 | #rstats lifehacks for instructors + Wrap up |
 
 ## Instructor
 

@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>&gt; 03   &gt; computing infrastructure</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="dr. mine çetinkaya-rundel" />
+    <meta name="date" content="2020-01-27" />
+    <link href="libs/font-awesome/css/all.css" rel="stylesheet" />
+    <link href="libs/font-awesome/css/v4-shims.css" rel="stylesheet" />
+    <link href="libs/countdown/countdown.css" rel="stylesheet" />
+    <script src="libs/countdown/countdown.js"></script>
+    <link rel="stylesheet" href="../../xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="../../slides-style.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# &gt; 03 <br> &gt; computing infrastructure
+## 💫 with RStudio Cloud! <br> 🔗 <a href="https://rstd.io/design-ds-class">rstd.io/design-ds-class</a>
+### dr. mine çetinkaya-rundel
+### 27 jan 2020
+
+---
+
+
+
+
+
+layout: true
+  
+&lt;div class="my-footer"&gt;
+&lt;span&gt;
+Dr. Mine Çetinkaya-Rundel - &lt;a href="https://rstd.io/design-ds-class" target="_blank"&gt;rstd.io/design-ds-class&lt;/a&gt;
+&lt;/span&gt;
+&lt;/div&gt; 
+
+---
+
+
+
+.pull-left[
+### don't start like this
+
+- Install R
+- Install RStudio
+- Install the following packages:
+  - rmarkdown
+  - tidyverse 
+  - ...
+- Load these packages
+- Install git
+]
+.pull-right[
+### start like this
+
+- Go to rstudio.cloud
+- Log in
+
+
+```r
+&gt;hello R!
+```
+]
+
+---
+
+## Why RStudio in the cloud?
+
+- Reduce friction at first exposure to R
+- Avoid local installation
+- Install R and RStudio on a server and provide access to students:
+  - Centralized RStudio server __*__
+  - Dockerized RStudio server __*__
+  - RStudio Cloud
+  
+.footnote[
+__*__ Çetinkaya-Rundel, Mine, and Rundel, Colin. "Infrastructure and tools for teaching computing throughout the statistical curriculum." The American Statistician (2018). Part of the Practical Data Science for Stats collection.
+]
+
+---
+
+class: middle, inverse
+
+# Hello RStudio Cloud!
+
+---
+
+## What is RStudio Cloud?
+
+.pull-left-narrow[
+&lt;img src="img/cloud.png" width="264" /&gt;
+]
+.pull-right-wide[
+.large[We created **RStudio Cloud** to make it easy for professionals, hobbyists, trainers, teachers, and students to do, share, teach, and learn data science using R.]
+]
+
+---
+
+&lt;img src="img/rstudio-ide.png" width="777" /&gt;
+
+---
+
+&lt;img src="img/rstudio-cloud.png" width="764" /&gt;
+
+---
+
+## Why RStudio Cloud?
+
+- Does not require IT support
+- Features designed for instructors:
+  - Classes can be organized in workspaces
+  - Members can be assigned different roles: instructor, TA, student
+  - Projects can be public or private
+  - Projects can be made into assignments 
+  - Students can make copies of projects created by instructor
+  - Instructor can peek into student projects
+  - A base project template can ensure same packages in each new project created in the workspace
+  - Git works out of the box
+
+---
+
+## Contexts
+
+- Semester long courses
+  - Intro data science / statistics: little to no background in stats, data science, programming
+  - Upper level data science / statistics: Varied computing background and different computer setups
+  
+- Shorter workshops: Likely no opportunity to communicate pre-workshop instructions, varied computing background and learning goals
+
+---
+
+.your-turn[
+Log out of RStudio Cloud and log back in.
+]
+
+<div class="countdown" id="timer_5e2ef1ed" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+
+## Workspaces
+
+- When you create an account on RStudio Cloud you get a workspace of your own
+
+- You can add a new workspace and control its permissions
+
+- Projects in either workspace can be public or private
+
+---
+
+## Projects
+
+- A new project in RStudio Cloud
+
+- is basically a new project in the RStudio IDE
+
+.alert[
+**PSA:** If you use RStudio, use projects! Trust me, you won’t regret it. Find out more at r4ds.had.co.nz/workflow-projects.html.
+]
+
+---
+
+## Projects from Git
+
+- A new project from Git Repo in RStudio Cloud
+- is creates (cloning) a project from a Git repository RStudio
+
+----
+
+class: middle, inverse
+
+# Teaching a short workshop
+
+---
+
+class: middle, center
+
+&lt;img src="img/cloud-setup-tweet.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+
+class: middle, center
+
+.larger[
+👩‍🏫 teacher
+]
+.larger[
+👩‍💻 student
+]
+
+---
+
+&lt;iframe width="1200" height="530" src="https://www.youtube.com/embed/81MrMcKZTX8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+.right[ .large[ 👩‍🏫  ]  ]
+
+---
+
+&lt;iframe width="1200" height="530" src="https://www.youtube.com/embed/_VCYdDQTFG8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+.right[ .large[ 👩‍💻  ]  ]
+
+---
+
+## Sharing an individual project
+
+&lt;br&gt;
+
+.pull-left[
+### Good!
+
+- Students land directly in a project upon login
+- Works well for workshops where all work will be completed in a single project
+- Also great for sharing code in general, e.g. collaboration, reprexes, etc.
+]
+--
+.pull-right[
+### Not so good...
+
+- Students need to remember to make a copy of the project (which means you need to remember to remind them!)
+- Changes you make after student launches the project won’t propagate to their project
+]
+
+---
+
+.your-turn[
+
+#### First you're the instructor:
+- Create a new project and give it a name.
+- Create a template R Markdown document in the project.
+- Change the access level of the project so others can see it as well.
+- Grab the project URL and share it with your neighbor:
+- Tip: You can create a short link for the URL at bitly.com.
+
+#### Now you're the student: 
+Access your neighbor's project as if you're the student and they’re the instructor.
+
+]
+
+<div class="countdown" id="timer_5e2ef146" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+
+class: middle, inverse
+
+# Teaching a longer course
+
+---
+
+&lt;iframe width="1200" height="530" src="https://www.youtube.com/embed/tqu1m9R1HLw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+.right[ .large[ 👩‍🏫  ]  ]
+
+---
+
+.your-turn[
+
+#### You’re the instructor:
+
+- Create a new workspace and give it a name.
+  - Tip: Check in with your neighbor and use a different name.
+- Add a short description.
+
+]
+
+<div class="countdown" id="timer_5e2ef2a6" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+
+## Getting students into class workspace
+
+#### Under the Membership tab:
+
+.pull-left-narrow[
+&lt;img src="img/workspace-access.png" width="100%" /&gt;
+]
+.pull-right-wide[
+- Make workspace shared for a short period of time, share link with students, enroll them as contributors.
+- After drop/add switch over to this access level
+- Use invitations for visitors added mid-semester
+]
+
+.right[ .large[ 👩‍🏫  ]  ]
+
+---
+
+## Permission levels
+
+| role        | permission                                       | course role |
+|-------------|--------------------------------------------------|-------------|
+| admin       | manage users, view, edit and manage all projects | instructor  |
+| moderator   | view, edit and manage all projects               | TA          |
+| contributor | create, edit and manage their own projects       | student     |
+| viewer      | view projects shared with everyone               | auditor     |
+
+.right[ .large[ 👩‍🏫  ]  ]
+
+---
+
+## Permissions
+
+### Under the Membership tab:
+
+.pull-left-narrow[
+&lt;img src="img/permissions.png" width="100%" /&gt;
+]
+.pull-right-wide[
+- By default, all permissions are turned off
+- Think carefully before checking these boxes
+]
+
+.right[ .large[ 👩‍🏫  ]  ]
+
+---
+
+## Capacity
+
+&lt;img src="img/capacity.png" width="100%" /&gt;
+
+.right[ .large[ 👩‍🏫  ]  ]
+
+---
+
+.your-turn[
+
+#### You’re the instructor:
+
+- Change the settings of your workspace to Shared.
+- Change the permissions so that contributors or viewers can’t see the list of members and can’t change the visibility of their projects.
+
+]
+
+<div class="countdown" id="timer_5e2ef0af" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+
+&lt;iframe width="1200" height="530 src="https://www.youtube.com/embed/Fz9UR6uxAG4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+.right[ .large[ 👩‍🏫  ]  ]
+
+---
+
+.your-turn[
+
+#### You’re the instructor:
+
+- Add a base project to your workspace:
+  - Install one or two of your favorite packages.
+  - Start an R Markdown document so necessary packages get installed.
+  - Add a code-of-conduct.md (you can copy-paste from [here](https://web.cvent.com/event/36ebe042-0113-44f1-8e36-b9bc5d0733bf/websitePage:988cd046-614c-445b-b658-1c8d83ca82b0) if you like) or some other plain text document.
+- Make this project visible to everyone.
+In the settings menu, set this project as the base project.
+- Create a new assignment: `Homework 01`.
+
+]
+
+<div class="countdown" id="timer_5e2ef397" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+
+&lt;iframe width="1200" height="530 src="https://www.youtube.com/embed/k_W1kS10rLw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+.right[ .large[ 👩‍💻  ]  ]
+
+---
+
+.your-turn[
+
+#### You’re the instructor:
+- Grab the sharing link for your workspace.
+  - Optional: Make a short link for it.
+- Share it with your neighbor.
+
+#### Now you’re the student:
+- Access your neighbor’s workspace and start the assignment.
+
+]
+
+<div class="countdown" id="timer_5e2ef2ea" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+
+## Git integration
+
+Base project template can be used, so new project from git also has the right packages installed!
+
+&lt;img src="img/git-integration.png" width="881" /&gt;
+
+---
+
+## Sharing a workspace
+
+.pull-left[
+### Good!
+
+- Various permission levels
+- Base projects with desired packages installed
+- Assignments, which remove the need to remind students to make a copy of the project before starting work
+- Ability to peek into students’ projects
+]
+.pull-right[
+### Not so good...
+
+- Students land in the workspace, may need to provide instructions for the next steps
+- You can update the base project throughout the course, but it will only be applied to projects created going forward
+]
+
+---
+
+class: middle, inverse
+
+# On the horizon...
+
+---
+
+## Institution accounts
+
+![](img/institution-accounts.png)&lt;!-- --&gt;
+
+---
+
+## Dashboards
+
+Student usage / engagement metrics
+
+&lt;img src="img/dashboard.png" width="992" /&gt;
+
+---
+
+## 📦 rscloud
+
+- A new package for managing RStudio Cloud spaces with R: [github.com/rstudio/rscloud](https://github.com/rstudio/rscloud)
+- Requires an API key, which any instructor can request (via email for now, but soon in the UI as well)
+
+---
+
+class: middle, inverse
+
+# Parting remarks
+
+---
+
+## Tips
+
+- Each project is allocated 1GB of RAM
+  - Test things out before assignments involving large datasets 
+
+- What your students see is not always what you see
+  - Create a secondary account and add as a student
+  
+---
+
+## Primers
+
+.pull-left[
+&lt;img src="img/primers.png" width="100%" /&gt;
+]
+.pull-right[
+[rstudio.cloud/learn/primers](https://rstudio.cloud/learn/primers)
+
+- Free primers made with the **learnr** package
+- Companion to R4DS by Grolemund and Wickham
+]
+
+---
+
+class: middle
+
+&lt;img src="img/wip-beta.png" width="100%" /&gt;
+
+---
+
+class: middle
+
+&lt;img src="img/free-lunch.png" width="100%" /&gt;
+
+---
+
+.discussion[
+What models can you envision for collecting assignments and providing feedback when teaching with RStudio Cloud?
+]
+
+<div class="countdown" id="timer_5e2ef2fb" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "solarized-light",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"slideNumberFormat": "<div class=\"progress-bar-container\">   <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">   </div> </div>`"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

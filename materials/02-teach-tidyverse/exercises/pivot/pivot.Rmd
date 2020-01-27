@@ -1,0 +1,22 @@
+---
+title: "Pivot functions"
+subtitle: "Designing the Data Science Classroom"
+output: html_document
+---
+  
+The American Association of University Professors (AAUP) is a nonprofit membership association of faculty and other academic professionals. [This report](https://www.aaup.org/sites/default/files/files/AAUP_Report_InstrStaff-75-11_apr2013.pdf) by the AAUP shows trends in instructional staff employees between 1975 and 2011, and contains an image very similar to the one given below.
+
+```{r load-packages, message=FALSE}
+library(tidyverse)
+```
+
+```{r}
+staff <- read_csv("../../../data/instructional-staff.csv")
+staff
+```
+
+- Convert the data from wide format to long format.
+- **Stretch goal:** Convert the back to wide format from long format.
+
+---
+
