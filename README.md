@@ -87,7 +87,7 @@ devtools::install_github("rundel/ghclass")
 | 10:30 - 11:00 | :coffee: *Coffee break*   |
 | 11:00 - 12:30 | [Teaching the tidyverse](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/02-teach-tidyverse) |
 | 12:00 - 13:30 | :fork_and_knife: *Lunch break*    |
-| 13:30 - 15:00 | [Computing infrastructure: RStudio Cloud](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/03-rstudio-cloud) |
+| 13:30 - 15:00 | [Computing infrastructure with RStudio Cloud](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/03-rstudio-cloud) |
 | 15:00 - 15:30 | :coffee: *Coffee break*   |
 | 15:30 - 17:00 | [Case study: Design your assignment on RStudio Cloud](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/04-case-study) |
 

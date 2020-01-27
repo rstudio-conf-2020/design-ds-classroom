@@ -1,5 +1,5 @@
 ---
-title: "> 02 <br> > teach the tidyverse"
+title: "> 02 <br> > teaching the tidyverse"
 subtitle: "`r emo::ji('broom')` tidy up your teaching! <br> `r emo::ji('link')` [rstd.io/design-ds-class](https://rstd.io/design-ds-class)"
 author: "dr. mine çetinkaya-rundel"
 date: "27 jan 2020"
