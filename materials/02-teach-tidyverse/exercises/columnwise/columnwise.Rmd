@@ -1,0 +1,41 @@
+---
+title: "Columnwise operations"
+subtitle: "Designing the Data Science Classroom"
+output: html_document
+---
+  
+Convert all factor variables in `evals` to characters. Keep in mind that this should be introductory audience friendly, if possible. For any function you choose, think about how you would introduce it to your students..
+
+```{r load-packages, message=FALSE}
+library(tidyverse)
+library(openintro)
+```
+
+```{r glimpse-data}
+glimpse(evals)
+```
+
+---
+
+## Solution 1
+
+```{r solution-1}
+# place code here...
+```
+
+---
+
+## Solution 2
+
+```{r solution-2}
+# install_github("tidyverse/dplyr")
+library(dplyr)
+
+# place code here...
+```
+
+
+
+
+---
+
