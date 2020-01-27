@@ -46,6 +46,11 @@
   text-align: right;
 }
 
+/* Alignment */
+.right{
+  text-align: right;
+}
+
 /* Margins around headers */
 
 h1, h2, h3 {
