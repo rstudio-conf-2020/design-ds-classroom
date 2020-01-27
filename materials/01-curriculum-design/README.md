@@ -19,4 +19,6 @@
   - [UN Votes](https://github.com/rstudio-conf-2020/design-ds-classroom/blob/master/materials/01-curriculum-design/exercises/un-votes/un-votes.Rmd)
   - [Start with cake](https://github.com/rstudio-conf-2020/design-ds-classroom/blob/master/materials/01-curriculum-design/exercises/start-with-cake/start-with-cake.Rmd)
     - Add your exercise idea here...
+    - And another idea, 
+    - and another idea...
   - [Hide / show](https://github.com/rstudio-conf-2020/design-ds-classroom/blob/master/materials/01-curriculum-design/exercises/hide-show/hide-show.Rmd)
