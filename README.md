@@ -93,6 +93,8 @@ devtools::install_github("rundel/ghclass")
 
 ### Day 2 - Tuesday, Jan 28
 
+**Materials for Day 2 will be posted in the morning of Day 2**
+
 | Time          | Activity         |
 | :------------ | :--------------- |
 | 09:00 - 10:30 | [Reproducible workflows: R Markdown, Git, GitHub](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/05-github) |
