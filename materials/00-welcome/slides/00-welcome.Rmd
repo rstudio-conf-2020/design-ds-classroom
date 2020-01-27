@@ -61,6 +61,11 @@ Turn to your neighbor and introduce yourself:
 - What is one characteristic of your most/least favorite teacher?
 ]
 
+```{r echo=FALSE}
+countdown(minutes = 2)
+```
+
+
 ---
 
 ## Important info
