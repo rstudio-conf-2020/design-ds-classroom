@@ -97,13 +97,13 @@ devtools::install_github("rundel/ghclass")
 
 | Time          | Activity         |
 | :------------ | :--------------- |
-| 09:00 - 10:30 | [Reproducible workflows: R Markdown, Git, GitHub](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/05-github) |
+| 09:00 - 10:30 | Reproducible workflows: R Markdown, Git, GitHub] |
 | 10:30 - 11:00 | :coffee: *Coffee break*   |
-| 11:00 - 12:30 | [Getting more out of GitHub](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/06-more-github)|
+| 11:00 - 12:30 | Getting more out of GitHub |
 | 12:00 - 13:30 | :fork_and_knife: *Lunch break*    |
-| 13:30 - 15:00 | [Interactivity and immediate feedback](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/07-learnr) |
+| 13:30 - 15:00 | Interactivity and immediate feedback |
 | 15:00 - 15:30 | :coffee: *Coffee break*   |
-| 15:30 - 17:00 | [#rstats lifehacks for instructors](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/08-lifehacks) + wrap up   |
+| 15:30 - 17:00 | #rstats lifehacks for instructors + Wrap up   |
 
 ## Instructor
 
