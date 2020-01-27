@@ -1,4 +1,4 @@
-# 07 - #rstats lifehacks for instructors
+# 08 - #rstats lifehacks for instructors
 
 ## Learning goals
 

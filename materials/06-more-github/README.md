@@ -1,4 +1,4 @@
-# 05 - More GitHub
+# 06 - More GitHub
 
 ## Learning goals
 

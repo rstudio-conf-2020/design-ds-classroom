@@ -1,4 +1,4 @@
-# 05 - More GitHub
+# 07 - Learnr
 
 ## Learning goals
 
