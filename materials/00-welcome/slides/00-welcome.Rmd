@@ -22,7 +22,7 @@ output:
 ```{r child = "../../setup.Rmd"}
 ```
 
-class: middle, center
+class: middle
 
 
 ## [rstd.io/design-ds-class](https://rstd.io/design-ds-class)
