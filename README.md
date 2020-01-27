@@ -52,7 +52,8 @@ Finally, specific to this workshop:
   
 ```
 install.packages("devtools", "tidyverse", "unvotes", 
-                 "rvest", "DT", "nycflights13", "gapminder")
+                 "rvest", "DT", "nycflights13", 
+                 "gapminder", "infer")
 ```
 
   - From GitHub:
@@ -60,6 +61,7 @@ install.packages("devtools", "tidyverse", "unvotes",
 ```
 library(devtools)
 install_github("rundel/ghclass")
+install_github("OpenIntroStat/openintro-r-package")
 ```
 
 
