@@ -809,4 +809,10 @@ tibble(run = 1:5) %>%
 - There are many ways of getting to the answer
 - Some likely need more scaffolding than others
 - It's worth considering how much of `purrr` fits into your introductory data science curriculum
-  - We'll give one example later where `purrr` brings big wins!
+  - We'll give one example later where `purrr` provides big wins!
+
+---
+
+.your-turn[
+If you are already teaching with the tidyverse, take a minute to note down a pain point you have encountered. If not, write about why you are/are not likely to switch to teaching with the tidyverse.
+]

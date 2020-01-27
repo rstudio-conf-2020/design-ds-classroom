@@ -70,7 +70,7 @@ background-size: cover
 
 class: middle, inverse
 
-## .hand[ Ok, hold on to that thought! ]
+## .hand[ OK, hold on to that thought! ]
 
 ---
 
@@ -92,11 +92,15 @@ class: middle
 
 ## backwards design
 
-Set goals for educational curriculum before choosing instructional methods + forms of assessment^[Wiggins, Grant P., Grant Wiggins, and Jay McTighe. Understanding by design. Ascd, 2005.]
+Set goals for educational curriculum before choosing instructional methods + forms of assessment
 
 1. Identify desired results
 1. Determine acceptable evidence
 1. Plan learning experiences and instruction
+
+.footnote[
+Wiggins, Grant P., Grant Wiggins, and Jay McTighe. Understanding by design. Ascd, 2005.
+]
 
 ---
 
@@ -233,7 +237,7 @@ Discuss in groups of three and then as a large group.
 - Which components do you have reservations about, and why?
 ]
 
-<div class="countdown" id="timer_5e2e8cc6" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5e2f12c1" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -340,7 +344,7 @@ class: middle, center
   - What would you add to the instructions? What would you take away?
 ]
 
-<div class="countdown" id="timer_5e2e8c4b" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5e2f1106" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -541,7 +545,7 @@ un_votes %&gt;%
 - Compare notes with neighbors. 
 ]
 
-<div class="countdown" id="timer_5e2e8bfb" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5e2f105c" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -662,13 +666,13 @@ un_votes %&gt;%
 ```
 ]
 
-<div class="countdown" id="timer_5e2e8d8e" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5e2f138b" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
 ---
 
-## Designining code snippets for teaching
+## Designing code snippets for teaching
 
 - Write it out to your heart's desire and polish it
 
@@ -725,21 +729,20 @@ us_votes
 
 ```
 ## # A tibble: 5,256 x 14
-##     rcid country country_code vote  session importantvote date      
-##    &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;        &lt;fct&gt;   &lt;dbl&gt; &lt;chr&gt;         &lt;date&gt;    
-##  1     6 United… US           no          1 No            1946-01-04
-##  2     8 United… US           no          1 No            1946-01-05
-##  3    11 United… US           yes         1 No            1946-02-05
-##  4    18 United… US           no          1 No            1946-02-03
-##  5    19 United… US           yes         1 No            1946-02-03
-##  6    24 United… US           yes         1 No            1946-12-05
-##  7    26 United… US           no          1 No            1946-12-06
-##  8    27 United… US           yes         1 No            1946-12-06
-##  9    28 United… US           yes         1 No            1946-12-06
-## 10    29 United… US           yes         1 No            1946-12-06
-## # … with 5,246 more rows, and 7 more variables: unres &lt;chr&gt;,
-## #   amend &lt;dbl&gt;, para &lt;dbl&gt;, short &lt;chr&gt;, descr &lt;chr&gt;,
-## #   short_name &lt;chr&gt;, issue &lt;chr&gt;
+##     rcid country country_code vote  session importantvote date       unres amend
+##    &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;        &lt;fct&gt;   &lt;dbl&gt; &lt;chr&gt;         &lt;date&gt;     &lt;chr&gt; &lt;dbl&gt;
+##  1     6 United… US           no          1 No            1946-01-04 R/1/…     0
+##  2     8 United… US           no          1 No            1946-01-05 R/1/…     1
+##  3    11 United… US           yes         1 No            1946-02-05 R/1/…     0
+##  4    18 United… US           no          1 No            1946-02-03 R/1/…     1
+##  5    19 United… US           yes         1 No            1946-02-03 R/1/…     0
+##  6    24 United… US           yes         1 No            1946-12-05 R/1/…     0
+##  7    26 United… US           no          1 No            1946-12-06 R/1/…     0
+##  8    27 United… US           yes         1 No            1946-12-06 R/1/…     0
+##  9    28 United… US           yes         1 No            1946-12-06 R/1/…     0
+## 10    29 United… US           yes         1 No            1946-12-06 R/1/…     0
+## # … with 5,246 more rows, and 5 more variables: para &lt;dbl&gt;, short &lt;chr&gt;,
+## #   descr &lt;chr&gt;, short_name &lt;chr&gt;, issue &lt;chr&gt;
 ```
 ]
 

@@ -61,7 +61,7 @@ background-size: cover
 
 class: middle, inverse
 
-## .hand[ Ok, hold on to that thought! ]
+## .hand[ OK, hold on to that thought! ]
 
 ---
 
@@ -83,11 +83,15 @@ class: middle
 
 ## backwards design
 
-Set goals for educational curriculum before choosing instructional methods + forms of assessment^[Wiggins, Grant P., Grant Wiggins, and Jay McTighe. Understanding by design. Ascd, 2005.]
+Set goals for educational curriculum before choosing instructional methods + forms of assessment
 
 1. Identify desired results
 1. Determine acceptable evidence
 1. Plan learning experiences and instruction
+
+.footnote[
+Wiggins, Grant P., Grant Wiggins, and Jay McTighe. Understanding by design. Ascd, 2005.
+]
 
 ---
 
@@ -771,7 +775,7 @@ countdown(minutes = 5)
 
 ---
 
-## Designining code snippets for teaching
+## Designing code snippets for teaching
 
 - Write it out to your heart's desire and polish it
 

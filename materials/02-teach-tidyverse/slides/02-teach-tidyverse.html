@@ -433,14 +433,14 @@ staff
 
 ```
 ## # A tibble: 5 x 12
-##   faculty_type `1975` `1989` `1993` `1995` `1999` `2001` `2003` `2005`
-##   &lt;chr&gt;         &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
-## 1 Full-Time T…   29     27.6   25     24.8   21.8   20.3   19.3   17.8
-## 2 Full-Time T…   16.1   11.4   10.2    9.6    8.9    9.2    8.8    8.2
-## 3 Full-Time N…   10.3   14.1   13.6   13.6   15.2   15.5   15     14.8
-## 4 Part-Time F…   24     30.4   33.1   33.2   35.5   36     37     39.3
-## 5 Graduate St…   20.5   16.5   18.1   18.8   18.7   19     20     19.9
-## # … with 3 more variables: `2007` &lt;dbl&gt;, `2009` &lt;dbl&gt;, `2011` &lt;dbl&gt;
+##   faculty_type `1975` `1989` `1993` `1995` `1999` `2001` `2003` `2005` `2007`
+##   &lt;chr&gt;         &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+## 1 Full-Time T…   29     27.6   25     24.8   21.8   20.3   19.3   17.8   17.2
+## 2 Full-Time T…   16.1   11.4   10.2    9.6    8.9    9.2    8.8    8.2    8  
+## 3 Full-Time N…   10.3   14.1   13.6   13.6   15.2   15.5   15     14.8   14.9
+## 4 Part-Time F…   24     30.4   33.1   33.2   35.5   36     37     39.3   40.5
+## 5 Graduate St…   20.5   16.5   18.1   18.8   18.7   19     20     19.9   19.5
+## # … with 2 more variables: `2009` &lt;dbl&gt;, `2011` &lt;dbl&gt;
 ```
 ]
 
@@ -505,7 +505,7 @@ pivot_longer(data, cols, names_to = "name",
 - **Stretch goal:** Convert the back to wide format from long format.
 ]
 
-<div class="countdown" id="timer_5e2ed69b" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5e2f11d0" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -650,7 +650,7 @@ class: middle
 Convert all factor variables in `evals` to characters. Keep in mind that this should be introductory audience friendly, if possible. For any function you choose, think about how you would introduce it to your students.
 ]
 
-<div class="countdown" id="timer_5e2ed735" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5e2f12f6" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -679,7 +679,7 @@ Solve the same problem using `dplyr::across()`.
 countdown(minutes = 3)
 ```
 
-<div class="countdown" id="timer_5e2ed6ac" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5e2f124b" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -705,20 +705,19 @@ evals %&gt;% select(score, starts_with("bty_"))
 
 ```
 ## # A tibble: 463 x 8
-##    score bty_f1lower bty_f1upper bty_f2upper bty_m1lower bty_m1upper
-##    &lt;dbl&gt;       &lt;int&gt;       &lt;int&gt;       &lt;int&gt;       &lt;int&gt;       &lt;int&gt;
-##  1   4.7           5           7           6           2           4
-##  2   4.1           5           7           6           2           4
-##  3   3.9           5           7           6           2           4
-##  4   4.8           5           7           6           2           4
-##  5   4.6           4           4           2           2           3
-##  6   4.3           4           4           2           2           3
-##  7   2.8           4           4           2           2           3
-##  8   4.1           5           2           5           2           3
-##  9   3.4           5           2           5           2           3
-## 10   4.5           2           5           4           3           3
-## # … with 453 more rows, and 2 more variables: bty_m2upper &lt;int&gt;,
-## #   bty_avg &lt;dbl&gt;
+##    score bty_f1lower bty_f1upper bty_f2upper bty_m1lower bty_m1upper bty_m2upper
+##    &lt;dbl&gt;       &lt;int&gt;       &lt;int&gt;       &lt;int&gt;       &lt;int&gt;       &lt;int&gt;       &lt;int&gt;
+##  1   4.7           5           7           6           2           4           6
+##  2   4.1           5           7           6           2           4           6
+##  3   3.9           5           7           6           2           4           6
+##  4   4.8           5           7           6           2           4           6
+##  5   4.6           4           4           2           2           3           3
+##  6   4.3           4           4           2           2           3           3
+##  7   2.8           4           4           2           2           3           3
+##  8   4.1           5           2           5           2           3           3
+##  9   3.4           5           2           5           2           3           3
+## 10   4.5           2           5           4           3           3           2
+## # … with 453 more rows, and 1 more variable: bty_avg &lt;dbl&gt;
 ```
 ]
 
@@ -742,20 +741,19 @@ evals %&gt;%
 
 ```
 ## # A tibble: 463 x 7
-##    bty_f1lower bty_f1upper bty_f2upper bty_m1lower bty_m1upper
-##          &lt;int&gt;       &lt;int&gt;       &lt;int&gt;       &lt;int&gt;       &lt;int&gt;
-##  1           5           7           6           2           4
-##  2           5           7           6           2           4
-##  3           5           7           6           2           4
-##  4           5           7           6           2           4
-##  5           4           4           2           2           3
-##  6           4           4           2           2           3
-##  7           4           4           2           2           3
-##  8           5           2           5           2           3
-##  9           5           2           5           2           3
-## 10           2           5           4           3           3
-## # … with 453 more rows, and 2 more variables: bty_m2upper &lt;int&gt;,
-## #   bty_avg &lt;dbl&gt;
+##    bty_f1lower bty_f1upper bty_f2upper bty_m1lower bty_m1upper bty_m2upper
+##          &lt;int&gt;       &lt;int&gt;       &lt;int&gt;       &lt;int&gt;       &lt;int&gt;       &lt;int&gt;
+##  1           5           7           6           2           4           6
+##  2           5           7           6           2           4           6
+##  3           5           7           6           2           4           6
+##  4           5           7           6           2           4           6
+##  5           4           4           2           2           3           3
+##  6           4           4           2           2           3           3
+##  7           4           4           2           2           3           3
+##  8           5           2           5           2           3           3
+##  9           5           2           5           2           3           3
+## 10           2           5           4           3           3           2
+## # … with 453 more rows, and 1 more variable: bty_avg &lt;dbl&gt;
 ```
 ]
 
@@ -828,21 +826,20 @@ sales %&gt;%
 
 ```
 ## # A tibble: 620 x 16
-##    gender first_name last_name   age phone_number hobbies SetID Number
-##  * &lt;chr&gt;  &lt;chr&gt;      &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;        &lt;list&gt;  &lt;int&gt; &lt;chr&gt; 
-##  1 Female Kimberly   Beckstead    24 216-555-2549 &lt;chr [… 24701 76062 
-##  2 Male   Neel       Garvin       35 819-555-3189 &lt;chr [… 25626 70595 
-##  3 Male   Neel       Garvin       35 819-555-3189 &lt;chr [… 24665 21031 
-##  4 Female Chelsea    Bouchard     41 &lt;NA&gt;         &lt;chr [… 24695 31048 
-##  5 Female Chelsea    Bouchard     41 &lt;NA&gt;         &lt;chr [… 25626 70595 
-##  6 Female Chelsea    Bouchard     41 &lt;NA&gt;         &lt;chr [… 24721 10831 
-##  7 Female Bryanna    Welsh        19 &lt;NA&gt;         &lt;chr [… 24797 75138 
-##  8 Female Bryanna    Welsh        19 &lt;NA&gt;         &lt;chr [… 24701 76062 
-##  9 Male   Caleb      Garcia-W…    37 907-555-9236 &lt;chr [… 24730 41115 
-## 10 Male   Caleb      Garcia-W…    37 907-555-9236 &lt;chr [… 25611 21127 
-## # … with 610 more rows, and 8 more variables: Theme &lt;chr&gt;,
-## #   Subtheme &lt;chr&gt;, Year &lt;int&gt;, Name &lt;chr&gt;, Pieces &lt;int&gt;,
-## #   USPrice &lt;dbl&gt;, ImageURL &lt;chr&gt;, Quantity &lt;dbl&gt;
+##    gender first_name last_name   age phone_number hobbies SetID Number Theme
+##  * &lt;chr&gt;  &lt;chr&gt;      &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;        &lt;list&gt;  &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;
+##  1 Female Kimberly   Beckstead    24 216-555-2549 &lt;chr [… 24701 76062  DC C…
+##  2 Male   Neel       Garvin       35 819-555-3189 &lt;chr [… 25626 70595  Ninj…
+##  3 Male   Neel       Garvin       35 819-555-3189 &lt;chr [… 24665 21031  Arch…
+##  4 Female Chelsea    Bouchard     41 &lt;NA&gt;         &lt;chr [… 24695 31048  Crea…
+##  5 Female Chelsea    Bouchard     41 &lt;NA&gt;         &lt;chr [… 25626 70595  Ninj…
+##  6 Female Chelsea    Bouchard     41 &lt;NA&gt;         &lt;chr [… 24721 10831  Duplo
+##  7 Female Bryanna    Welsh        19 &lt;NA&gt;         &lt;chr [… 24797 75138  Star…
+##  8 Female Bryanna    Welsh        19 &lt;NA&gt;         &lt;chr [… 24701 76062  DC C…
+##  9 Male   Caleb      Garcia-W…    37 907-555-9236 &lt;chr [… 24730 41115  Frie…
+## 10 Male   Caleb      Garcia-W…    37 907-555-9236 &lt;chr [… 25611 21127  Mine…
+## # … with 610 more rows, and 7 more variables: Subtheme &lt;chr&gt;, Year &lt;int&gt;,
+## #   Name &lt;chr&gt;, Pieces &lt;int&gt;, USPrice &lt;dbl&gt;, ImageURL &lt;chr&gt;, Quantity &lt;dbl&gt;
 ```
 
 ---
@@ -898,18 +895,18 @@ sales %&gt;%
 
 ```
 ## # A tibble: 250 x 7
-##    gender first_name last_name      age phone_number hobbies  purchases
-##    &lt;chr&gt;  &lt;chr&gt;      &lt;chr&gt;        &lt;dbl&gt; &lt;chr&gt;        &lt;list&gt;   &lt;list&gt;   
-##  1 Female Kimberly   Beckstead       24 216-555-2549 &lt;chr [2… &lt;list [1…
-##  2 Male   Neel       Garvin          35 819-555-3189 &lt;chr [2… &lt;list [2…
-##  3 Female Chelsea    Bouchard        41 &lt;NA&gt;         &lt;chr [3… &lt;list [3…
-##  4 Female Bryanna    Welsh           19 &lt;NA&gt;         &lt;chr [2… &lt;list [2…
-##  5 Male   Caleb      Garcia-Wide…    37 907-555-9236 &lt;chr [3… &lt;list [2…
-##  6 Male   Chase      Fortenberry     19 205-555-3704 &lt;chr [2… &lt;list [2…
-##  7 Male   Kevin      Cruz            20 947-555-7946 &lt;chr [1… &lt;list [1…
-##  8 Male   Connor     Brown           36 516-555-4310 &lt;chr [1… &lt;list [3…
-##  9 Female Toni       Borison         40 284-555-4560 &lt;chr [2… &lt;list [2…
-## 10 Male   Daniel     Hurst           44 251-555-0845 &lt;chr [1… &lt;list [2…
+##    gender first_name last_name        age phone_number hobbies   purchases 
+##    &lt;chr&gt;  &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt;        &lt;list&gt;    &lt;list&gt;    
+##  1 Female Kimberly   Beckstead         24 216-555-2549 &lt;chr [2]&gt; &lt;list [1]&gt;
+##  2 Male   Neel       Garvin            35 819-555-3189 &lt;chr [2]&gt; &lt;list [2]&gt;
+##  3 Female Chelsea    Bouchard          41 &lt;NA&gt;         &lt;chr [3]&gt; &lt;list [3]&gt;
+##  4 Female Bryanna    Welsh             19 &lt;NA&gt;         &lt;chr [2]&gt; &lt;list [2]&gt;
+##  5 Male   Caleb      Garcia-Wideman    37 907-555-9236 &lt;chr [3]&gt; &lt;list [2]&gt;
+##  6 Male   Chase      Fortenberry       19 205-555-3704 &lt;chr [2]&gt; &lt;list [2]&gt;
+##  7 Male   Kevin      Cruz              20 947-555-7946 &lt;chr [1]&gt; &lt;list [1]&gt;
+##  8 Male   Connor     Brown             36 516-555-4310 &lt;chr [1]&gt; &lt;list [3]&gt;
+##  9 Female Toni       Borison           40 284-555-4560 &lt;chr [2]&gt; &lt;list [2]&gt;
+## 10 Male   Daniel     Hurst             44 251-555-0845 &lt;chr [1]&gt; &lt;list [2]&gt;
 ## # … with 240 more rows
 ```
 
@@ -927,18 +924,18 @@ sales %&gt;%
 
 ```
 ## # A tibble: 620 x 7
-##    gender first_name last_name     age phone_number hobbies purchases  
-##    &lt;chr&gt;  &lt;chr&gt;      &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt;        &lt;list&gt;  &lt;list&gt;     
-##  1 Female Kimberly   Beckstead      24 216-555-2549 &lt;chr [… &lt;named lis…
-##  2 Male   Neel       Garvin         35 819-555-3189 &lt;chr [… &lt;named lis…
-##  3 Male   Neel       Garvin         35 819-555-3189 &lt;chr [… &lt;named lis…
-##  4 Female Chelsea    Bouchard       41 &lt;NA&gt;         &lt;chr [… &lt;named lis…
-##  5 Female Chelsea    Bouchard       41 &lt;NA&gt;         &lt;chr [… &lt;named lis…
-##  6 Female Chelsea    Bouchard       41 &lt;NA&gt;         &lt;chr [… &lt;named lis…
-##  7 Female Bryanna    Welsh          19 &lt;NA&gt;         &lt;chr [… &lt;named lis…
-##  8 Female Bryanna    Welsh          19 &lt;NA&gt;         &lt;chr [… &lt;named lis…
-##  9 Male   Caleb      Garcia-Wid…    37 907-555-9236 &lt;chr [… &lt;named lis…
-## 10 Male   Caleb      Garcia-Wid…    37 907-555-9236 &lt;chr [… &lt;named lis…
+##    gender first_name last_name        age phone_number hobbies   purchases       
+##    &lt;chr&gt;  &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt;        &lt;list&gt;    &lt;list&gt;          
+##  1 Female Kimberly   Beckstead         24 216-555-2549 &lt;chr [2]&gt; &lt;named list [10…
+##  2 Male   Neel       Garvin            35 819-555-3189 &lt;chr [2]&gt; &lt;named list [10…
+##  3 Male   Neel       Garvin            35 819-555-3189 &lt;chr [2]&gt; &lt;named list [10…
+##  4 Female Chelsea    Bouchard          41 &lt;NA&gt;         &lt;chr [3]&gt; &lt;named list [10…
+##  5 Female Chelsea    Bouchard          41 &lt;NA&gt;         &lt;chr [3]&gt; &lt;named list [10…
+##  6 Female Chelsea    Bouchard          41 &lt;NA&gt;         &lt;chr [3]&gt; &lt;named list [10…
+##  7 Female Bryanna    Welsh             19 &lt;NA&gt;         &lt;chr [2]&gt; &lt;named list [10…
+##  8 Female Bryanna    Welsh             19 &lt;NA&gt;         &lt;chr [2]&gt; &lt;named list [10…
+##  9 Male   Caleb      Garcia-Wideman    37 907-555-9236 &lt;chr [3]&gt; &lt;named list [10…
+## 10 Male   Caleb      Garcia-Wideman    37 907-555-9236 &lt;chr [3]&gt; &lt;named list [10…
 ## # … with 610 more rows
 ```
 
@@ -957,21 +954,20 @@ sales %&gt;%
 
 ```
 ## # A tibble: 620 x 16
-##    gender first_name last_name   age phone_number hobbies SetID Number
-##    &lt;chr&gt;  &lt;chr&gt;      &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;        &lt;list&gt;  &lt;int&gt; &lt;chr&gt; 
-##  1 Female Kimberly   Beckstead    24 216-555-2549 &lt;chr [… 24701 76062 
-##  2 Male   Neel       Garvin       35 819-555-3189 &lt;chr [… 25626 70595 
-##  3 Male   Neel       Garvin       35 819-555-3189 &lt;chr [… 24665 21031 
-##  4 Female Chelsea    Bouchard     41 &lt;NA&gt;         &lt;chr [… 24695 31048 
-##  5 Female Chelsea    Bouchard     41 &lt;NA&gt;         &lt;chr [… 25626 70595 
-##  6 Female Chelsea    Bouchard     41 &lt;NA&gt;         &lt;chr [… 24721 10831 
-##  7 Female Bryanna    Welsh        19 &lt;NA&gt;         &lt;chr [… 24797 75138 
-##  8 Female Bryanna    Welsh        19 &lt;NA&gt;         &lt;chr [… 24701 76062 
-##  9 Male   Caleb      Garcia-W…    37 907-555-9236 &lt;chr [… 24730 41115 
-## 10 Male   Caleb      Garcia-W…    37 907-555-9236 &lt;chr [… 25611 21127 
-## # … with 610 more rows, and 8 more variables: Theme &lt;chr&gt;,
-## #   Subtheme &lt;chr&gt;, Year &lt;int&gt;, Name &lt;chr&gt;, Pieces &lt;int&gt;,
-## #   USPrice &lt;dbl&gt;, ImageURL &lt;chr&gt;, Quantity &lt;dbl&gt;
+##    gender first_name last_name   age phone_number hobbies SetID Number Theme
+##    &lt;chr&gt;  &lt;chr&gt;      &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;        &lt;list&gt;  &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;
+##  1 Female Kimberly   Beckstead    24 216-555-2549 &lt;chr [… 24701 76062  DC C…
+##  2 Male   Neel       Garvin       35 819-555-3189 &lt;chr [… 25626 70595  Ninj…
+##  3 Male   Neel       Garvin       35 819-555-3189 &lt;chr [… 24665 21031  Arch…
+##  4 Female Chelsea    Bouchard     41 &lt;NA&gt;         &lt;chr [… 24695 31048  Crea…
+##  5 Female Chelsea    Bouchard     41 &lt;NA&gt;         &lt;chr [… 25626 70595  Ninj…
+##  6 Female Chelsea    Bouchard     41 &lt;NA&gt;         &lt;chr [… 24721 10831  Duplo
+##  7 Female Bryanna    Welsh        19 &lt;NA&gt;         &lt;chr [… 24797 75138  Star…
+##  8 Female Bryanna    Welsh        19 &lt;NA&gt;         &lt;chr [… 24701 76062  DC C…
+##  9 Male   Caleb      Garcia-W…    37 907-555-9236 &lt;chr [… 24730 41115  Frie…
+## 10 Male   Caleb      Garcia-W…    37 907-555-9236 &lt;chr [… 25611 21127  Mine…
+## # … with 610 more rows, and 7 more variables: Subtheme &lt;chr&gt;, Year &lt;int&gt;,
+## #   Name &lt;chr&gt;, Pieces &lt;int&gt;, USPrice &lt;dbl&gt;, ImageURL &lt;chr&gt;, Quantity &lt;dbl&gt;
 ```
 
 ---
@@ -1001,21 +997,20 @@ sales %&gt;%
 
 ```
 ## # A tibble: 620 x 16
-##    gender first_name last_name   age phone_number hobbies SetID Number
-##    &lt;chr&gt;  &lt;chr&gt;      &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;        &lt;list&gt;  &lt;int&gt; &lt;chr&gt; 
-##  1 Female Kimberly   Beckstead    24 216-555-2549 &lt;chr [… 24701 76062 
-##  2 Male   Neel       Garvin       35 819-555-3189 &lt;chr [… 25626 70595 
-##  3 Male   Neel       Garvin       35 819-555-3189 &lt;chr [… 24665 21031 
-##  4 Female Chelsea    Bouchard     41 &lt;NA&gt;         &lt;chr [… 24695 31048 
-##  5 Female Chelsea    Bouchard     41 &lt;NA&gt;         &lt;chr [… 25626 70595 
-##  6 Female Chelsea    Bouchard     41 &lt;NA&gt;         &lt;chr [… 24721 10831 
-##  7 Female Bryanna    Welsh        19 &lt;NA&gt;         &lt;chr [… 24797 75138 
-##  8 Female Bryanna    Welsh        19 &lt;NA&gt;         &lt;chr [… 24701 76062 
-##  9 Male   Caleb      Garcia-W…    37 907-555-9236 &lt;chr [… 24730 41115 
-## 10 Male   Caleb      Garcia-W…    37 907-555-9236 &lt;chr [… 25611 21127 
-## # … with 610 more rows, and 8 more variables: Theme &lt;chr&gt;,
-## #   Subtheme &lt;chr&gt;, Year &lt;int&gt;, Name &lt;chr&gt;, Pieces &lt;int&gt;,
-## #   USPrice &lt;dbl&gt;, ImageURL &lt;chr&gt;, Quantity &lt;dbl&gt;
+##    gender first_name last_name   age phone_number hobbies SetID Number Theme
+##    &lt;chr&gt;  &lt;chr&gt;      &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;        &lt;list&gt;  &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;
+##  1 Female Kimberly   Beckstead    24 216-555-2549 &lt;chr [… 24701 76062  DC C…
+##  2 Male   Neel       Garvin       35 819-555-3189 &lt;chr [… 25626 70595  Ninj…
+##  3 Male   Neel       Garvin       35 819-555-3189 &lt;chr [… 24665 21031  Arch…
+##  4 Female Chelsea    Bouchard     41 &lt;NA&gt;         &lt;chr [… 24695 31048  Crea…
+##  5 Female Chelsea    Bouchard     41 &lt;NA&gt;         &lt;chr [… 25626 70595  Ninj…
+##  6 Female Chelsea    Bouchard     41 &lt;NA&gt;         &lt;chr [… 24721 10831  Duplo
+##  7 Female Bryanna    Welsh        19 &lt;NA&gt;         &lt;chr [… 24797 75138  Star…
+##  8 Female Bryanna    Welsh        19 &lt;NA&gt;         &lt;chr [… 24701 76062  DC C…
+##  9 Male   Caleb      Garcia-W…    37 907-555-9236 &lt;chr [… 24730 41115  Frie…
+## 10 Male   Caleb      Garcia-W…    37 907-555-9236 &lt;chr [… 25611 21127  Mine…
+## # … with 610 more rows, and 7 more variables: Subtheme &lt;chr&gt;, Year &lt;int&gt;,
+## #   Name &lt;chr&gt;, Pieces &lt;int&gt;, USPrice &lt;dbl&gt;, ImageURL &lt;chr&gt;, Quantity &lt;dbl&gt;
 ```
 
 ---
@@ -1085,7 +1080,13 @@ tibble(run = 1:5) %&gt;%
 - There are many ways of getting to the answer
 - Some likely need more scaffolding than others
 - It's worth considering how much of `purrr` fits into your introductory data science curriculum
-  - We'll give one example later where `purrr` brings big wins!
+  - We'll give one example later where `purrr` provides big wins!
+
+---
+
+.your-turn[
+If you are already teaching with the tidyverse, take a minute to note down a pain point you have encountered. If not, write about why you are/are not likely to switch to teaching with the tidyverse.
+]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
