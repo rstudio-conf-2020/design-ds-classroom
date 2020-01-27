@@ -51,17 +51,25 @@ Finally, specific to this workshop:
   - From CRAN:
   
 ```
-install.packages("devtools", "tidyverse", "unvotes", 
-                 "rvest", "DT", "nycflights13", 
-                 "gapminder", "infer")
+install.packages("devtools")
+install.packages("DiagrammeR")
+install.packages("DT")
+install.packages("gapminder")
+install.packages("lubridate")
+install.packages("infer")
+install.packages("magick")
+install.packages("nycflights13")
+install.packages("rvest")
+install.packages("tidyverse")
+install.packages("unvotes")
 ```
 
   - From GitHub:
   
 ```
-library(devtools)
-install_github("rundel/ghclass")
-install_github("OpenIntroStat/openintro-r-package")
+devtools::install_github("gadenbuie/countdown")
+devtools::install_github("OpenIntroStat/openintro-r-package")
+devtools::install_github("rundel/ghclass")
 ```
 
 
