@@ -1,0 +1,88 @@
+---
+title: "> 00 <br> > welcome"
+subtitle: "`r emo::ji('partying')` let's get this party started! <br> `r emo::ji('link')` [rstd.io/design-ds-class](https://rstd.io/design-ds-class)"
+author: "dr. mine çetinkaya-rundel"
+date: "27 jan 2020"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["../../xaringan-themer.css", "../../slides-style.css"]
+    nature:
+      highlightStyle: solarized-light
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>`
+---
+
+```{r child = "../../setup.Rmd"}
+```
+
+## Workshop materials
+
+### [https://rstd.io/design-ds-class](https://rstd.io/design-ds-class)
+
+### WiFi: rstudio20 / tidyverse20
+
+---
+
+## Meet & greet
+
+### Mine Çetinkaya-Rundel
+
+- Professional Educator & Data Scientist, RStudio
+- Senior Lecturer, University of Edinburgh
+- Associate Professor of the Practice, Duke Statistical Science 
+- Past Chair, Section on Statistics and Data Science Education
+
+---
+
+.your-turn[
+Turn to your neighbor and introduce yourself:
+
+- Name
+- Affiliation
+- Where are you in your (teaching) career?
+- What are your learning goals for this workshop?
+- What is one characteristic of your most/least favorite teacher?
+]
+
+---
+
+## Important info
+
+- [Code of Conduct](https://web.cvent.com/event/36ebe042-0113-44f1-8e36-b9bc5d0733bf/websitePage:988cd046-614c-445b-b658-1c8d83ca82b0?RefId=conference&utm_campaign=Site%20Promo&utm_medium=Ste&utm_source=ConfPage)
+- Emergency exits and other emergency info
+
+---
+
+## Asking for help
+
+- During "lecture" bits:
+  - Please raise your hand
+- During exercises:
+  - **Pink sticky:** I need help to move forward
+  - **Green sticky:** I'm done (this one is easy to forget!)
+
+---
+
+## Schedule for the day
+
+<br>
+
+|               |                  |
+|---------------| -----------------|
+| 09:00 - 10:30	| Welcome + Curriculum design |
+| 10:30 - 11:00	| Coffee break |
+| 11:00 - 12:30	| Teaching the tidyverse |
+| 12:00 - 13:30	| Lunch break |
+| 13:30 - 15:00	| Computing infrastructure: RStudio Cloud |
+| 15:00 - 15:30	| Coffee break |
+| 15:30 - 17:00	| Reproducible workflows: R Markdown, Git, GitHub |
+
+
+
