@@ -511,5 +511,3 @@ What models can you envision for collecting assignments and providing feedback w
 ```{r echo=FALSE}
 countdown(minutes = 3)
 ```
-
-
