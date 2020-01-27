@@ -83,7 +83,7 @@ devtools::install_github("rundel/ghclass")
 
 | Time          | Activity         |
 | :------------ | :--------------- |
-| 09:00 - 10:30 | Welcome +  [Curriculum design](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/01-curriculum-design) |
+| 09:00 - 10:30 | [Welcome](https://rstudio-conf-2020.github.io/design-ds-classroom/materials/00-welcome/slides/00-welcome.html#1) +  [Curriculum design](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/01-curriculum-design) |
 | 10:30 - 11:00 | :coffee: *Coffee break*   |
 | 11:00 - 12:30 | [Teaching the tidyverse](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/02-teach-tidyverse) |
 | 12:00 - 13:30 | :fork_and_knife: *Lunch break*    |
