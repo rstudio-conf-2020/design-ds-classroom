@@ -83,7 +83,7 @@ Turn to your neighbor and introduce yourself:
   - Please raise your hand
 - During exercises:
   - **Pink sticky:** I need help to move forward
-  - **Green sticky:** I'm done (this one is easy to forget!)
+  - **Yellow sticky:** I'm done (this one is easy to forget!)
 
 ---
 
