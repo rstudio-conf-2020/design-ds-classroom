@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron:  '15 12 * * *'
+    - cron:  '55 22 * * *'
 name: Style Repo
 jobs:
   style:
