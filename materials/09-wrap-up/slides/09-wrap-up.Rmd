@@ -1,0 +1,32 @@
+---
+title: "> 09 <br> > wrap up"
+subtitle: "`r emo::ji('cry')` see you another time! <br> `r emo::ji('link')` [rstd.io/design-ds-class](https://rstd.io/design-ds-class)"
+author: "dr. mine çetinkaya-rundel"
+date: "28 jan 2020"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["../../xaringan-themer.css", "../../slides-style.css"]
+    nature:
+      highlightStyle: solarized-light
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>`
+---
+
+```{r child = "../../setup.Rmd"}
+```
+
+## What's next?
+
+- See the full curriculum at [datasciencebox.org](https://datasciencebox.org/)
+- Let us know how the workshop went [rstd.io/ws-survey](http://rstd.io/ws-survey)
+- Keep in touch!
+  - RStudio Community - teaching tag
+  - Follow up email for future virtual catch ups
+  
