@@ -3,12 +3,10 @@
 ## Learning goals
 
 - Writing learnr tutorials
-- Question types
+- Various question types
+- Options for logging data
 - Deploying tutorials
-- Logging data
-- Writing checks
 
 ## Materials
 
 - [Slides]()
-- Exercises

@@ -11,23 +11,20 @@ runtime: shiny_prerendered
 ```{r setup, include=FALSE}
 # load packages
 library(learnr)
+library(sortable)
+library(parsons)
 library(tidyverse)
+library(openintro)
 
 # don't echo chunks
 knitr::opts_chunk$set(echo = FALSE)
-
-# code checking
-checker <- function(label, user_code, check_code, envir_result, evaluate_result, ...) {
-  list(message = check_code, correct = TRUE, location = "append")
-}
-tutorial_options(exercise.timelimit = 10, exercise.checker = checker)
 ```
 
 ## Topic 1
 
 Hello, today we learn about `learnr`.
 
-![Typo and Dorianne Gray](images/cats.jpg)
+![Typo and Dorianne Gray](img/cats.jpg)
 
 ![Data science cycle](https://afit-r.github.io/public/images/data-science.png)
 
@@ -96,6 +93,8 @@ mtcars %>%
 
 *You can include any number of single or multiple choice questions as a quiz. Use the `question` function to define a question and the `quiz` function for grouping multiple questions together.*
 
+### Independent questions
+
 Some questions to verify that you understand the purposes of various base and recommended R packages:
 
 ```{r quiz}
@@ -125,6 +124,107 @@ question(
   correct = "Fantastico!"
 )
 ```
+
+### Building questions
+
+**Teacher salaries**
+
+In this quiz we explore a dataset of teacher salaries from 2009-2010 for 71 teachers employed by the St. Louis Public School in Michigan, US.
+
+The data are stored in a dataset called `teacher`.
+
+The variables we will consider are:
+
+- `degree`: Highest educational degree attained: BA (Bachelor's degree) or 
+MA (Master's degree).
+- `years`: Number of years employed by the school district.
+- `total`: Total annual salary of the teacher.
+
+First, let's predict `total` annual salary from the number of `years` of employment  
+by the school district.
+
+```{r q1, echo=FALSE}
+question(
+    "Which of the following is/are the correct way(s) to fit such a model in R?
+    Check all that apply.",
+    random_answer_order = TRUE, allow_retry = TRUE, type = "multiple",
+    answer("`lm(teacher$total ~ teacher$years)`", correct = TRUE),
+    answer("`lm(total ~ years, data = teacher)`", correct = TRUE),
+    answer("`lm(years ~ total, data = teacher)`"),
+    answer("`teacher %>% 
+  lm(years ~ total, data = .)`", correct = TRUE),
+    answer("`teacher %>% lm(years ~ total)`", message = "`data` is not the first 
+    argument in the `lm()` function, so we need to explicitly pass what comes 
+    before the pipe operator to the second argument in this function.")
+  )
+```
+
+Next, use the exercise chunk below to run one of the correct options from Question 1 to fit a model predicting `total` annual salary from the number of `years` of employment by the school district.
+
+```{r lm-total-years-fit, exercise = TRUE}
+# add your code here
+```
+
+```{r q2, echo=FALSE}
+question(
+    "Which of the following is the correct linear model for predicting `total` 
+    annual salary from the number of `years` of employment by the school district?",
+    random_answer_order = TRUE, allow_retry = TRUE,
+    answer("$\\widehat{total} = 54,406 + 1,001~years$", correct = TRUE),
+    answer("$total = 54,406 + 1,001~years$"),
+    answer("$\\widehat{years} = 54,406 + 1,001~total$"),
+    answer("$\\widehat{total} = 1,001 + 54,406~years$"),
+    answer("$\\widehat{total} = 1,001 - 54,406~years$")
+  )
+```
+
+## Sorting 
+
+### Simple sorting question
+
+```{r sorting}
+# Define the answer options
+insects <- c(
+    "ant",
+    "bumble bee",
+    "cricket",
+    "dragonfly"
+  )
+
+# Initialize the question
+question_rank(
+  "Sort these insects in alpabetical order:",
+  answer(insects, correct = TRUE),
+  answer(rev(insects), correct = FALSE, message = "Other direction!"),
+  allow_retry = TRUE
+)
+```
+
+### Parson's problems
+
+**Note:** This is still experimental.
+
+Suppose I want to calculate mean sepal length of each species of irises and display the results in ascending order of the means calculated. Put the code below in the right order.
+
+```{r parsons}
+question_parsons(
+ initial = c(
+    "summarise(xbar = mean(Sepal.Length))",
+    "iris",
+    "arrange(xbar)",
+    "group_by(Species)"
+ ),
+ answer(c(
+    "iris",
+    "group_by(Species)",
+    "summarise(xbar = mean(Sepal.Length))",
+    "arrange(xbar)"
+  ), correct = TRUE),
+  problem_type = "tidyverse"
+)
+```
+
+
 
 ## Videos
 
