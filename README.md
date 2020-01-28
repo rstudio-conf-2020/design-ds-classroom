@@ -74,12 +74,13 @@ install.packages("unvotes")
 devtools::install_github("gadenbuie/countdown")
 devtools::install_github("OpenIntroStat/openintro-r-package")
 devtools::install_github("rundel/ghclass")
+devtools::install_github("rstudio/parsons")
 ```
 
 
-## Useful links
+## RStudio Cloud
 
-- RStudio Cloud workspace: [rstd.io/design-ds-cloud](https://rstd.io/design-ds-cloud)
+The RStudio Cloud workspace is at  [rstd.io/design-ds-cloud](https://rstd.io/design-ds-cloud).
 
 ## Schedule
 
