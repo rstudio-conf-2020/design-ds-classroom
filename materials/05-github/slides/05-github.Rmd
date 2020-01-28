@@ -22,6 +22,12 @@ output:
 ```{r child = "../../setup.Rmd"}
 ```
 
+---
+
+# rstd.io/design-ds-form
+
+---
+
 class: middle, inverse
 
 # Reproducibility in the classroom
@@ -301,8 +307,11 @@ class: middle
 - This will generate an email to students.
 - Instruct students to check their email and follow the instructions.
 
-```{r eval=FALSE}
+```{r}
 org <- "design-ds-class"
+```
+
+```{r eval=FALSE}
 roster <- read_csv("SURVEY RESPONSES.csv")
 
 org_invite(org = org, user = roster$username)
