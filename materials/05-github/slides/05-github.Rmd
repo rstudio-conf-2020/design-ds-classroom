@@ -540,4 +540,3 @@ countdown(minutes = 10)
 - Students need to remember to pull before starting work
 - Impossible (?) to avoid shell intervention every once in a while
 - Remind students on that future projects should go on GitHub with PI approval
-

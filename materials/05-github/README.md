@@ -12,5 +12,4 @@
 
 ## Materials
 
-- [Slides]()
-- Exercises
+- [Slides](https://rstudio-conf-2020.github.io/design-ds-classroom/materials/05-github/slides/05-github.html#1)
