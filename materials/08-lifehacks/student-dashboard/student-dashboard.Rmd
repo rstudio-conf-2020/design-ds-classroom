@@ -18,7 +18,6 @@ runtime: shiny
 output:
   flexdashboard::flex_dashboard:
     orientation: rows
-    source_code: https://github.com/mine-cetinkaya-rundel/wtf-teach/blob/master/student-dashboard/student-dashboard.Rmd
     theme: bootstrap
 ---
 
@@ -37,8 +36,6 @@ Inputs {.sidebar}
 
 ```{r}
 student_survey <- read_csv("Getting to know you (Responses) - Form Responses 1.csv")
-
-print(nrow(student_survey))
 
 names(student_survey) <- c(
   "timestamp",
@@ -63,24 +60,9 @@ names(student_survey) <- c(
   "photo"
 )
 
-print(nrow(student_survey))
 
 student_survey <- student_survey %>%
   arrange(name)
-
-print(nrow(student_survey))
-print(student_survey$name)
-
-renderText({
-  paste("nrow(student_survey):", nrow(student_survey))
-})
-
-renderText({
-  paste("students:", paste(student_survey$name, collapse = ", "))
-})
-
-print(nrow(student_survey))
-
 ```
 
 ```{r}
@@ -98,9 +80,11 @@ selected_student <- reactive({
 
 ```{r}
 renderImage(
-  list(src = paste0("www/", input$student, ".png"),
-       contentType = "image/png",
-       width = 230),
+  {
+    list(src = paste0("www/", input$student, ".png"),
+         contentType = "image/png",
+         width = 230)
+  },
   deleteFile = FALSE
 )
 ```
@@ -115,13 +99,7 @@ Row
 renderValueBox({
   preferred_name <- selected_student() %>%
     select(preferred_name)
-print(paste("input$student:", input$student))
-print(selected_student())
-print(which(student_survey$name == input$student))
-print(paste("nrow_2: ", nrow(student_survey)))
-print(student_survey$name)
-print(student_survey$name == input$student)
-print(preferred_name)
+  
   valueBox(
     value = preferred_name,
     icon = "fa-portrait"
@@ -187,10 +165,6 @@ Row
 ### Anything else you would like me to know about you? {data-width=500}
 
 ```{r}
-student_survey
-```
-
-```{r}
 renderText(selected_student()$know_other)
 ```
 
@@ -198,13 +172,6 @@ Row
 -----------------------------------------------------------------------
 
 ### Something cool / unique about yourself {data-width=200}
-
-```{r}
-renderTable({
-  student_survey
-})
-```
-
 
 ```{r}
 renderText(selected_student()$unique)
@@ -232,7 +199,7 @@ Overall
 =======================================================================
 
 ```{r}
-student_survey <- student_survey %>%
+student_survey_oa <- student_survey %>%
   mutate(
     read_slides = fct_other(read_slides, keep = c("Yes", "No")),
     read_slides = fct_relevel(read_slides, "Yes", "No", "Other"),
@@ -255,7 +222,7 @@ Row
 ### Were you able to read the slides on the board easily during the first lecture? {data-width=200}
 
 ```{r fig.width = 10}
-ggplot(student_survey, aes(x = read_slides, fill = read_slides)) +
+ggplot(student_survey_oa, aes(x = read_slides, fill = read_slides)) +
   geom_bar() +
   coord_flip() +
   scale_fill_viridis_d() +
@@ -269,7 +236,7 @@ ggplot(student_survey, aes(x = read_slides, fill = read_slides)) +
 ### Were you able to hear everything well during the first lecture? {data-width=200}
 
 ```{r fig.width = 10}
-ggplot(student_survey, aes(x = hear_lecture, fill = hear_lecture)) +
+ggplot(student_survey_oa, aes(x = hear_lecture, fill = hear_lecture)) +
   geom_bar() +
   coord_flip() +
   scale_fill_viridis_d() +
@@ -289,7 +256,7 @@ pal <- brewer.pal(4, "Blues")
 ```
 
 ```{r}
-student_survey %>%
+student_survey_oa %>%
   select(concern) %>%
   unnest_tokens(word, concern) %>%
   anti_join(stop_words, by = c("word" = "word")) %>%
@@ -301,7 +268,7 @@ student_survey %>%
 ### Is there anything you would like me to clarify about the course? {data-width=200}
 
 ```{r}
-student_survey %>%
+student_survey_oa %>%
   select(clarify) %>%
   unnest_tokens(word, clarify) %>%
   anti_join(stop_words, by = c("word" = "word")) %>%
