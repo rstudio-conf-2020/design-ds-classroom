@@ -67,16 +67,6 @@ class: middle, inverse
 
 ---
 
-## Roadmap
-
-- Narrative, figures, illustrations, and equations
-- Code exercises (R code chunks that students can edit and execute directly)
-- Quiz questions
-- Videos (supported services include YouTube and Vimeo)
-- Interactive Shiny components
-
----
-
 ## Getting started
 
 Follow along options:
@@ -87,7 +77,7 @@ Follow along options:
 
 - Cloud: Go to the workspace for this course and start the assignment called **07 - Learnr**.
 
-- Or just watch
+- Deployed tutorial: https://gallery.shinyapps.io/tutorial-demo/
 
 ---
 
