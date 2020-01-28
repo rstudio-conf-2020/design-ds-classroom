@@ -24,7 +24,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 Hello, today we learn about `learnr`.
 
-![Typo and Dorianne Gray](img/cats.jpg)
+![Typo and Dorianne Gray](images/cats.jpg)
 
 ![Data science cycle](https://afit-r.github.io/public/images/data-science.png)
 
