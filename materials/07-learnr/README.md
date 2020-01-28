@@ -9,4 +9,4 @@
 
 ## Materials
 
-- [Slides]()
+- [Slides](https://rstudio-conf-2020.github.io/design-ds-classroom/materials/07-learnr/slides/07-learnr.html#1)
