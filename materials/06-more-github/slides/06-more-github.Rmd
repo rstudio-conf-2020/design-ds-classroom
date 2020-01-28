@@ -1,5 +1,5 @@
 ---
-title: "> 05 <br> > getting more"
+title: "> 06 <br> > getting more"
 subtitle: "`r emo::ji('money_bag')` out of GitHub <br> `r emo::ji('link')` [rstd.io/design-ds-class](https://rstd.io/design-ds-class)"
 author: "dr. mine çetinkaya-rundel"
 date: "28 jan 2020"
