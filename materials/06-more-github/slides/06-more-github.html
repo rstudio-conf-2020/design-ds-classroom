@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>&gt; 05   &gt; getting more</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="dr. mine çetinkaya-rundel" />
+    <meta name="date" content="2020-01-28" />
+    <link href="libs/font-awesome/css/all.css" rel="stylesheet" />
+    <link href="libs/font-awesome/css/v4-shims.css" rel="stylesheet" />
+    <link href="libs/countdown/countdown.css" rel="stylesheet" />
+    <script src="libs/countdown/countdown.js"></script>
+    <link rel="stylesheet" href="../../xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="../../slides-style.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# &gt; 05 <br> &gt; getting more
+## 💰 out of GitHub <br> 🔗 <a href="https://rstd.io/design-ds-class">rstd.io/design-ds-class</a>
+### dr. mine çetinkaya-rundel
+### 28 jan 2020
+
+---
+
+
+
+
+
+layout: true
+  
+&lt;div class="my-footer"&gt;
+&lt;span&gt;
+Dr. Mine Çetinkaya-Rundel - &lt;a href="https://rstd.io/design-ds-class" target="_blank"&gt;rstd.io/design-ds-class&lt;/a&gt;
+&lt;/span&gt;
+&lt;/div&gt; 
+
+---
+
+--
+
+class: middle, inverse
+
+# Issue templates
+
+---
+
+## Issues for feedback
+
+- Using GitHub issues for feedback can be somewhat cumbersome.
+- Issue templates can ease the pain...
+- Issue templates live in the `".github/ISSUE_TEMPLATE"` folder
+- It's up to you whether you want to include these with your starter repo or add them after the deadline
+  - To add after deadline, use the `repo_add_file()` function
+
+&lt;br&gt;
+
+[DEMO]
+
+---
+
+.your-turn[
+Add a new issue to your neighbour's HW 01 repo using the issue template.
+]
+
+<div class="countdown" id="timer_5e303624" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+
+class: middle, inverse
+
+# Merge conflicts
+
+---
+
+## Merge conflicts
+
+- When two collaborators make changes to a file and push the file to their repo, git merges these two files.
+- If these two files have conflicting content on the same line, git will produce a **merge conflict**.
+
+---
+
+## Prep
+
+First, I'll add a simple text file to your team repos that you can use for practicing with merge conflicts, using the `repo_add_file()` function.
+
+&lt;br&gt;
+
+```
+# Merge conflicts
+
+This is line 1 of text.
+This is line 2 of text.
+This is line 3 of text.
+This is line 4 of text.
+```
+
+&lt;br&gt;
+
+[DEMO]
+
+---
+
+.your-turn[
+- Launch your Lab 03 project in RStudio Cloud and pull changes from GitHub. This should bring in the new file you got added.
+  - Alternatively, start fresh by cloning again from your Lab 03 repo.
+- Assign the numbers 1, 2, 3, (and 4 if there are 4 people in your team) to each of the team members.
+]
+
+---
+
+## Let's cause a merge conflict!
+
+- Take turns in completing the exercise, only one member at a time.
+- All other members should get up and look over the shoulder of the member who is doing the exercise.
+
+---
+
+## Member 1
+
+- Change the text `This is line 1 of text.` to something else, e.g. `I love R!`. 
+- Commit and push.
+
+🛑 Wait for instructions before moving on to the next step.
+
+---
+
+## Member 2 
+
+- Do not pull! 
+- Change the text `This is line 1 of text.` to something else, e.g. `I love RStudio!`. 
+- Commit and attempt to push, you should get an error. 
+- Pull. 
+- Take a look at the document with the merge conflict. Clear the merge conflict by choosing the correct/preferred change. 
+- Commit, and push.  
+
+🛑 Wait for instructions before moving on to the next step.
+
+---
+
+## Member 3
+
+- Change the text `This is line 2 of text.` to something else, e.g. `I love data science!`. 
+- Commit and attempt to push. You should get an error. 
+- Pull. 
+- No merge conflicts should occur. Now push.  
+
+🛑 Wait for instructions before moving on to the next step.
+
+---
+
+## Member 4
+
+- Change the text `This is line 2 of text.` to something else, e.g. `Is it lunch time yet?`. 
+- Commit and attempt to push. You should get an error. 
+- Pull. 
+- Take a look at the document with the merge conflict. 
+- Clear the merge conflict by choosing the correct/preferred change. 
+- Commit, and push.  
+
+🛑 Wait for instructions before moving on to the next step. 
+
+---
+
+## All members
+
+- Back to your seats.
+- Pull, and observe the changes in your document.
+
+---
+
+## Tips for collaborating via GitHub
+
+- Always pull first before you start working.
+- Commit, and push, often to minimize merge conflicts and/or to make merge conflicts easier to resolve.
+- If you find yourself in a situation that is difficult to resolve, ask questions asap, don't let it linger and get bigger.
+
+---
+
+.your-turn[
+- Work with your neighbor to design a different merge conflict activity. 
+- It can be totally different, or a modified version of the one we did.
+]
+
+<div class="countdown" id="timer_5e303372" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+
+class: middle, inverse
+
+# Automated feedback
+
+---
+
+## GitHub Actions
+
+- GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD. 
+- Kick off workflows with GitHub events like push, issue creation, or etc.
+- See https://github.com/rundel/ghclass-actions for more on GitHub actions and using them with ghclass.
+
+---
+
+class: middle
+
+In this next bit, we'll work with HW 01, your individual repos.
+
+---
+
+## Does my Rmd knit?
+
+You can check if your students' work is reproducible (e.g. does the Rmd knit) using GitHub Actions triggered each time they push.
+
+---
+
+`check-rmd.yml`
+
+.small[
+```yaml
+on: 
+  push:
+    branches:
+    - master
+    paths:
+    - 'hw-01-airbnb-edi.Rmd'  
+name: Check Repo
+jobs:
+  check-rmd:
+    runs-on: ubuntu-latest
+    container:
+      image: rocker/tidyverse:latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Check Rmd Rendering
+      run:  Rscript -e "rmarkdown::render('hw-01-airbnb-edi.Rmd')"
+```
+]
+
+[DEMO]
+
+---
+
+.your-turn[
+- Launch your HW 01 project in RStudio Cloud and pull changes.
+- Make a change in `hw-01-airbnb-edi.Rmd`, ideally one that would prevent the Rmd from knitting, e.g. add some faulty code to a code chunk. Knit the Rmd, confirm that it doesn't actually knit, but errors out. Commit and push anyway.
+- Go to your repo on GitHub and observe the build fail, and badge change.
+- Then, fix the code, confirm that your Rmd knits, then commit and push, and observe the build succeed and badge change to green.
+]
+
+<div class="countdown" id="timer_5e30347e" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+
+## How is my code style?
+
+- You can also provide feedback on students' code style using GitHub Actions. 
+
+- This time we'll schedule daily feedback: https://crontab.guru/.
+
+- Checks rely on the [Tidyverse style guide](https://style.tidyverse.org/) using the [**styler**](https://github.com/r-lib/styler) package.
+
+---
+
+.your-turn[
+- Launch your HW 01 project in RStudio Cloud and pull changes.
+- Make a change in one of the code chunks in `hw-01-airbnb-edi.Rmd`, ideally one with wonky style. See below for inspiration. Commit and push your changes.
+- Next, we'll observe how the styling check works.
+]
+
+
+```r
+x=4
+x*3
+(x+2)/   (  23+x  )
+```
+
+<div class="countdown" id="timer_5e30360a" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+
+`style.yml`
+
+.small[
+```yaml
+on:
+  schedule:
+    - cron:  '15 12 * * *'
+name: Style Repo
+jobs:
+  style:
+    runs-on: ubuntu-latest
+    container:
+      image: rundel/ghclass:latest
+    steps:
+    - name: Run styler on repo
+      env: 
+        GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git config --global user.name "${GITHUB_ACTOR}"
+        git config --global user.email "noreply@github.com"
+        Rscript -e "ghclass::repo_style(\"${GITHUB_REPOSITORY}\", tag_collaborators = FALSE, prompt = FALSE)"
+```
+]
+
+[DEMO]
+
+---
+
+.discussion[
+Discuss with your neihbors other checks you can envision using in your assignments. Don't worry about the technical details of actually implementing them, we're just looking for ideas for now.
+]
+
+<div class="countdown" id="timer_5e30336e" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "solarized-light",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"slideNumberFormat": "<div class=\"progress-bar-container\">   <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">   </div> </div>`"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -1,0 +1,307 @@
+---
+title: "> 05 <br> > getting more"
+subtitle: "`r emo::ji('money_bag')` out of GitHub <br> `r emo::ji('link')` [rstd.io/design-ds-class](https://rstd.io/design-ds-class)"
+author: "dr. mine çetinkaya-rundel"
+date: "28 jan 2020"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["../../xaringan-themer.css", "../../slides-style.css"]
+    nature:
+      highlightStyle: solarized-light
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>`
+---
+
+```{r child = "../../setup.Rmd"}
+```
+
+--
+
+class: middle, inverse
+
+# Issue templates
+
+---
+
+## Issues for feedback
+
+- Using GitHub issues for feedback can be somewhat cumbersome.
+- Issue templates can ease the pain...
+- Issue templates live in the `".github/ISSUE_TEMPLATE"` folder
+- It's up to you whether you want to include these with your starter repo or add them after the deadline
+  - To add after deadline, use the `repo_add_file()` function
+
+<br>
+
+[DEMO]
+
+---
+
+.your-turn[
+Add a new issue to your neighbour's HW 01 repo using the issue template.
+]
+
+```{r echo=FALSE}
+countdown(minutes = 3)
+```
+
+---
+
+class: middle, inverse
+
+# Merge conflicts
+
+---
+
+## Merge conflicts
+
+- When two collaborators make changes to a file and push the file to their repo, git merges these two files.
+- If these two files have conflicting content on the same line, git will produce a **merge conflict**.
+
+---
+
+## Prep
+
+First, I'll add a simple text file to your team repos that you can use for practicing with merge conflicts, using the `repo_add_file()` function.
+
+<br>
+
+```
+# Merge conflicts
+
+This is line 1 of text.
+This is line 2 of text.
+This is line 3 of text.
+This is line 4 of text.
+```
+
+<br>
+
+[DEMO]
+
+---
+
+.your-turn[
+- Launch your Lab 03 project in RStudio Cloud and pull changes from GitHub. This should bring in the new file you got added.
+  - Alternatively, start fresh by cloning again from your Lab 03 repo.
+- Assign the numbers 1, 2, 3, (and 4 if there are 4 people in your team) to each of the team members.
+]
+
+---
+
+## Let's cause a merge conflict!
+
+- Take turns in completing the exercise, only one member at a time.
+- All other members should get up and look over the shoulder of the member who is doing the exercise.
+
+---
+
+## Member 1
+
+- Change the text `This is line 1 of text.` to something else, e.g. `I love R!`. 
+- Commit and push.
+
+`r emo::ji("stop_sign")` Wait for instructions before moving on to the next step.
+
+---
+
+## Member 2 
+
+- Do not pull! 
+- Change the text `This is line 1 of text.` to something else, e.g. `I love RStudio!`. 
+- Commit and attempt to push, you should get an error. 
+- Pull. 
+- Take a look at the document with the merge conflict. Clear the merge conflict by choosing the correct/preferred change. 
+- Commit, and push.  
+
+`r emo::ji("stop_sign")` Wait for instructions before moving on to the next step.
+
+---
+
+## Member 3
+
+- Change the text `This is line 2 of text.` to something else, e.g. `I love data science!`. 
+- Commit and attempt to push. You should get an error. 
+- Pull. 
+- No merge conflicts should occur. Now push.  
+
+`r emo::ji("stop_sign")` Wait for instructions before moving on to the next step.
+
+---
+
+## Member 4
+
+- Change the text `This is line 2 of text.` to something else, e.g. `Is it lunch time yet?`. 
+- Commit and attempt to push. You should get an error. 
+- Pull. 
+- Take a look at the document with the merge conflict. 
+- Clear the merge conflict by choosing the correct/preferred change. 
+- Commit, and push.  
+
+`r emo::ji("stop_sign")` Wait for instructions before moving on to the next step. 
+
+---
+
+## All members
+
+- Back to your seats.
+- Pull, and observe the changes in your document.
+
+---
+
+## Tips for collaborating via GitHub
+
+- Always pull first before you start working.
+- Commit, and push, often to minimize merge conflicts and/or to make merge conflicts easier to resolve.
+- If you find yourself in a situation that is difficult to resolve, ask questions asap, don't let it linger and get bigger.
+
+---
+
+.your-turn[
+- Work with your neighbor to design a different merge conflict activity. 
+- It can be totally different, or a modified version of the one we did.
+]
+
+```{r echo=FALSE}
+countdown(minutes = 10)
+```
+
+---
+
+class: middle, inverse
+
+# Automated feedback
+
+---
+
+## GitHub Actions
+
+- GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD. 
+- Kick off workflows with GitHub events like push, issue creation, or etc.
+- See https://github.com/rundel/ghclass-actions for more on GitHub actions and using them with ghclass.
+
+---
+
+class: middle
+
+In this next bit, we'll work with HW 01, your individual repos.
+
+---
+
+## Does my Rmd knit?
+
+You can check if your students' work is reproducible (e.g. does the Rmd knit) using GitHub Actions triggered each time they push.
+
+---
+
+`check-rmd.yml`
+
+.small[
+```yaml
+on: 
+  push:
+    branches:
+    - master
+    paths:
+    - 'hw-01-airbnb-edi.Rmd'  
+name: Check Repo
+jobs:
+  check-rmd:
+    runs-on: ubuntu-latest
+    container:
+      image: rocker/tidyverse:latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Check Rmd Rendering
+      run:  Rscript -e "rmarkdown::render('hw-01-airbnb-edi.Rmd')"
+```
+]
+
+[DEMO]
+
+---
+
+.your-turn[
+- Launch your HW 01 project in RStudio Cloud and pull changes.
+- Make a change in `hw-01-airbnb-edi.Rmd`, ideally one that would prevent the Rmd from knitting, e.g. add some faulty code to a code chunk. Knit the Rmd, confirm that it doesn't actually knit, but errors out. Commit and push anyway.
+- Go to your repo on GitHub and observe the build fail, and badge change.
+- Then, fix the code, confirm that your Rmd knits, then commit and push, and observe the build succeed and badge change to green.
+]
+
+```{r echo=FALSE}
+countdown(minutes = 10)
+```
+
+---
+
+## How is my code style?
+
+- You can also provide feedback on students' code style using GitHub Actions. 
+
+- This time we'll schedule daily feedback: https://crontab.guru/.
+
+- Checks rely on the [Tidyverse style guide](https://style.tidyverse.org/) using the [**styler**](https://github.com/r-lib/styler) package.
+
+---
+
+.your-turn[
+- Launch your HW 01 project in RStudio Cloud and pull changes.
+- Make a change in one of the code chunks in `hw-01-airbnb-edi.Rmd`, ideally one with wonky style. See below for inspiration. Commit and push your changes.
+- Next, we'll observe how the styling check works.
+]
+
+```{r eval=FALSE}
+x=4
+x*3
+(x+2)/   (  23+x  )
+```
+
+```{r echo=FALSE}
+countdown(minutes = 3)
+```
+
+---
+
+`style.yml`
+
+.small[
+```yaml
+on:
+  schedule:
+    - cron:  '15 12 * * *'
+name: Style Repo
+jobs:
+  style:
+    runs-on: ubuntu-latest
+    container:
+      image: rundel/ghclass:latest
+    steps:
+    - name: Run styler on repo
+      env: 
+        GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git config --global user.name "${GITHUB_ACTOR}"
+        git config --global user.email "noreply@github.com"
+        Rscript -e "ghclass::repo_style(\"${GITHUB_REPOSITORY}\", tag_collaborators = FALSE, prompt = FALSE)"
+```
+]
+
+[DEMO]
+
+---
+
+.discussion[
+Discuss with your neihbors other checks you can envision using in your assignments. Don't worry about the technical details of actually implementing them, we're just looking for ideas for now.
+]
+
+```{r echo=FALSE}
+countdown(minutes = 3)
+```

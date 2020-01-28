@@ -1,9 +1,9 @@
-# 06 - More GitHub
+# 06 - Getting more out of GitHub
 
 ## Learning goals
 
+- Issue templates
 - Merge conflicts
-- Peer review
 - Automated feedback with GitHub Actions
 
 ## Materials

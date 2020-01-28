@@ -1,0 +1,17 @@
+on: 
+  push:
+    branches:
+    - master
+    paths:
+    - 'hw-01-airbnb-edi.Rmd'  
+name: Check Rmd
+jobs:
+  check-rmd:
+    runs-on: ubuntu-latest
+    container:
+      image: rocker/tidyverse:latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Check Rmd Rendering
+      run:  Rscript -e "rmarkdown::render('hw-01-airbnb-edi.Rmd')"

@@ -1,0 +1,17 @@
+on:
+  schedule:
+    - cron:  '15 12 * * *'
+name: Style Repo
+jobs:
+  style:
+    runs-on: ubuntu-latest
+    container:
+      image: rundel/ghclass:latest
+    steps:
+    - name: Run styler on repo
+      env: 
+        GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git config --global user.name "${GITHUB_ACTOR}"
+        git config --global user.email "noreply@github.com"
+        Rscript -e "ghclass::repo_style(\"${GITHUB_REPOSITORY}\", tag_collaborators = FALSE, prompt = FALSE)"
