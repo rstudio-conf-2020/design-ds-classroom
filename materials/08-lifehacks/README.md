@@ -9,5 +9,4 @@
 
 ## Materials
 
-- [Slides]()
-- Exercises
+- [Slides](https://rstudio-conf-2020.github.io/design-ds-classroom/materials/08-lifehacks/slides/08-lifehacks.html#1)
