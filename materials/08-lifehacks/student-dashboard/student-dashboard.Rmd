@@ -1,0 +1,313 @@
+---
+title: "Intro Data Science"
+resource_files:
+- www/Aslanbek Pelle.png
+- www/Chike Kravitz.png
+- www/Devan Alamanni.png
+- www/Fabian Grant.png
+- www/Hersilia Haakonsson.png
+- www/Karaugh Vaughn.png
+- www/Maui Thrussell.png
+- www/Neemias Vemulakonda.png
+- www/Shaniqua Santiago.png
+- www/Silver Leroy.png
+- www/Terry Gasper.png
+- www/Vin Nardo.png
+- www/Tivoli Adamo.png
+runtime: shiny
+output:
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    source_code: https://github.com/mine-cetinkaya-rundel/wtf-teach/blob/master/student-dashboard/student-dashboard.Rmd
+    theme: bootstrap
+---
+
+```{r setup}
+library(flexdashboard)
+library(tidyverse)
+library(wordcloud)
+library(tidytext)
+```
+
+Individual students
+=======================================================================
+
+Inputs {.sidebar}
+-----------------------------------------------------------------------
+
+```{r}
+student_survey <- read_csv("Getting to know you (Responses) - Form Responses 1.csv")
+
+print(nrow(student_survey))
+
+names(student_survey) <- c(
+  "timestamp",
+  "id", 
+  "name",
+  "preferred_name",
+  "pronounciation",
+  "pronouns",
+  "github_name",
+  "unique",
+  "know_other",
+  "learn_best",
+  "fav_class",
+  "programming",
+  "statistics",
+  "songs",
+  "learn_goal",
+  "concern",
+  "clarify",
+  "read_slides",
+  "hear_lecture",
+  "photo"
+)
+
+print(nrow(student_survey))
+
+student_survey <- student_survey %>%
+  arrange(name)
+
+print(nrow(student_survey))
+print(student_survey$name)
+
+renderText({
+  paste("nrow(student_survey):", nrow(student_survey))
+})
+
+renderText({
+  paste("students:", paste(student_survey$name, collapse = ", "))
+})
+
+print(nrow(student_survey))
+
+```
+
+```{r}
+selectInput(inputId = "student",
+            label = "Select a student",
+            choices = student_survey$name)
+```
+
+```{r}
+selected_student <- reactive({
+  student_survey %>%
+    filter(name == input$student)
+})
+```
+
+```{r}
+renderImage(
+  list(src = paste0("www/", input$student, ".png"),
+       contentType = "image/png",
+       width = 230),
+  deleteFile = FALSE
+)
+```
+
+Row
+-----------------------------------------------------------------------
+
+### Preferred name {.value-box}
+
+```{r}
+
+renderValueBox({
+  preferred_name <- selected_student() %>%
+    select(preferred_name)
+print(paste("input$student:", input$student))
+print(selected_student())
+print(which(student_survey$name == input$student))
+print(paste("nrow_2: ", nrow(student_survey)))
+print(student_survey$name)
+print(student_survey$name == input$student)
+print(preferred_name)
+  valueBox(
+    value = preferred_name,
+    icon = "fa-portrait"
+  )
+})
+```
+
+### Pronounciation {.value-box}
+
+```{r}
+renderValueBox({
+  pronounciation <- selected_student() %>%
+    mutate(pronounciation = if_else(is.na(pronounciation), preferred_name, pronounciation)) %>%
+    select(pronounciation)
+  valueBox(
+    value = pronounciation,
+    icon = "fa-microphone",
+    color = "success"
+  )
+})
+```
+
+### Pronouns {.value-box}
+
+```{r}
+renderValueBox({
+  pronouns <- selected_student() %>%
+    mutate(pronouns = if_else(is.na(pronouns), "", pronouns)) %>%
+    select(pronouns)
+  valueBox(
+    value = pronouns,
+    icon = "fa-user-check",
+    color = "info"
+  )
+})
+```
+
+Row
+-----------------------------------------------------------------------
+
+### Hope to learn... {data-width=200}
+
+
+```{r}
+renderText(selected_student()$learn_goal)
+```
+
+### Programming language before? {data-width=200}
+
+```{r}
+renderText(selected_student()$programming)
+```
+
+### Statistics course before? {data-width=200}
+
+```{r}
+renderText(selected_student()$statistics)
+```
+
+Row
+-----------------------------------------------------------------------
+
+### Anything else you would like me to know about you? {data-width=500}
+
+```{r}
+student_survey
+```
+
+```{r}
+renderText(selected_student()$know_other)
+```
+
+Row
+-----------------------------------------------------------------------
+
+### Something cool / unique about yourself {data-width=200}
+
+```{r}
+renderTable({
+  student_survey
+})
+```
+
+
+```{r}
+renderText(selected_student()$unique)
+```
+
+Row
+-----------------------------------------------------------------------
+
+### How do you learn best? {data-width=500}
+
+```{r}
+renderText(selected_student()$learn_best)
+```
+
+Row
+-----------------------------------------------------------------------
+
+### What, if anything, concerns you about this course? {data-width=500}
+
+```{r}
+renderText(selected_student()$concern)
+```
+
+Overall
+=======================================================================
+
+```{r}
+student_survey <- student_survey %>%
+  mutate(
+    read_slides = fct_other(read_slides, keep = c("Yes", "No")),
+    read_slides = fct_relevel(read_slides, "Yes", "No", "Other"),
+    hear_lecture = fct_other(hear_lecture, 
+                             keep = c("Yes", "No", "No, heard the professor but not the questions / answers from students who participated")),
+    hear_lecture = fct_recode(hear_lecture,
+                              `Heard prof,\nbut not student questions` = "No, heard the professor but not the questions / answers from students who participated"),
+    hear_lecture = fct_relevel(hear_lecture, "Yes", "No", "Heard prof,\nbut not student questions", "Other")
+    ) %>%
+  filter(
+    !is.na(hear_lecture),
+    !is.na(read_slides)
+  )
+```
+
+
+Row
+-----------------------------------------------------------------------
+
+### Were you able to read the slides on the board easily during the first lecture? {data-width=200}
+
+```{r fig.width = 10}
+ggplot(student_survey, aes(x = read_slides, fill = read_slides)) +
+  geom_bar() +
+  coord_flip() +
+  scale_fill_viridis_d() +
+  guides(fill = "none") +
+  labs(x = "", y = "") +
+  theme_minimal() +
+  theme(text = element_text(size = 22))
+```
+
+
+### Were you able to hear everything well during the first lecture? {data-width=200}
+
+```{r fig.width = 10}
+ggplot(student_survey, aes(x = hear_lecture, fill = hear_lecture)) +
+  geom_bar() +
+  coord_flip() +
+  scale_fill_viridis_d() +
+  guides(fill = "none") +
+  labs(x = "", y = "") +
+  theme_minimal() +
+  theme(text = element_text(size = 22))
+```
+
+Row
+-----------------------------------------------------------------------
+
+### What, if anything, concerns you about this course? {data-width=200}
+
+```{r}
+pal <- brewer.pal(4, "Blues")
+```
+
+```{r}
+student_survey %>%
+  select(concern) %>%
+  unnest_tokens(word, concern) %>%
+  anti_join(stop_words, by = c("word" = "word")) %>%
+  filter(!(word %in% c("23rd", "concerns"))) %>%
+  count(word) %>%
+  with(wordcloud(word, n, random.order = FALSE, colors = pal))
+```
+
+### Is there anything you would like me to clarify about the course? {data-width=200}
+
+```{r}
+student_survey %>%
+  select(clarify) %>%
+  unnest_tokens(word, clarify) %>%
+  anti_join(stop_words, by = c("word" = "word")) %>%
+  filter(word != "23rd") %>%
+  count(word) %>%
+  with(wordcloud(word, n, random.order = FALSE, colors = pal))
+```
+
+
