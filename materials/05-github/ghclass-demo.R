@@ -33,9 +33,9 @@ local_repo_clone(hw01_repos, local_path = "hw01_submissions")
 
 # create issues ----------------------------------------------------------------
 
-issue_create(roster$hw01_repo, # should be in org/repo format
-             title = "Feedback",
-             body = roster$hw01_feedback)
+issue_create(roster$repo, # should be in org/repo format
+             title = "Feedback for HW 01",
+             body = roster$feedback)
 
 # view repo stats --------------------------------------------------------------
 
@@ -45,8 +45,8 @@ org_repo_stats(org, filter = "hw-01-airbnb-edi-")
 
 org_create_assignment(
   org = org,
-  repo = paste0("lab-03-nobel-laureates-", roster$team_name),
-  user = roster$github_name,
-  team = roster$team_name,
+  repo = paste0("lab-03-nobel-laureates-", roster$team),
+  user = roster$username,
+  team = roster$team,
   source_repo = paste0(org, "/lab-03-nobel-laureates")
 )

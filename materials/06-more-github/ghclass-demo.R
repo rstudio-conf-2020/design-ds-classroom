@@ -44,9 +44,9 @@ repo_add_badge(
 # add style action -------------------------------------------------------------
 
 repo_add_file(
-  repo = hw01_repos, 
+  repo = hw01_repos,
   file = "materials/06-more-github/actions/style.yml",
-  repo_folder = ".github/workflows", 
-  message = "Add action to check for code style"
+  repo_folder = ".github/workflows",
+  message = "Change CRON time for action for code style",
+  overwrite = TRUE
 )
-
