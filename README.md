@@ -108,7 +108,7 @@ The RStudio Cloud workspace is at  [rstd.io/design-ds-cloud](https://rstd.io/des
 | 12:30 - 13:30 | :fork_and_knife: *Lunch break*    |
 | 13:30 - 15:00 | [Interactivity and immediate feedback](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/07-learnr) |
 | 15:00 - 15:30 | :coffee: *Coffee break*   |
-| 15:30 - 17:00 | [#rstats lifehacks for instructors](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/08-lifehacks) + [Wrap up](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/09-wrap-up.html#1) |
+| 15:30 - 17:00 | [#rstats lifehacks for instructors](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/08-lifehacks) + [Wrap up](https://github.com/rstudio-conf-2020/design-ds-classroom/tree/master/materials/slides/09-wrap-up.html#1) |
 
 ## Instructor
 
