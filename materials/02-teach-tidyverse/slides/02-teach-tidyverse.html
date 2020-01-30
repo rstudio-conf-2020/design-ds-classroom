@@ -151,12 +151,10 @@ mtcars &lt;- mtcars %&gt;%
 .small[
 
 ```r
-mtcars$trans_color &lt;- ifelse(mtcars$transmission == "automatic",
-                             "green", "blue")
-par(mar=c(0,0,0,0))
+mtcars$trans_color &lt;- ifelse(mtcars$transmission == "automatic", "green", "blue")
+par(mar = c(2.5, 2.5, 0, 0), mgp = c(1.5, 0.5, 0))
 plot(mtcars$mpg ~ mtcars$disp, col = mtcars$trans_color)
-legend("topright",
-       legend = c("automatic", "manual"),
+legend("topright", legend = c("automatic", "manual"),
        pch = 1, col = c("green", "blue"))
 ```
 
@@ -172,8 +170,7 @@ legend("topright",
 
 ```r
 ggplot(mtcars,
-       aes(x = disp, y = mpg,
-           color = transmission)) +
+       aes(x = disp, y = mpg, color = transmission)) +
   geom_point()
 ```
 
@@ -191,7 +188,7 @@ ggplot(mtcars,
 mtcars_cyl4 = mtcars[mtcars$cyl == 4, ]
 mtcars_cyl6 = mtcars[mtcars$cyl == 6, ]
 mtcars_cyl8 = mtcars[mtcars$cyl == 8, ]
-par(mfrow = c(1, 3), mar = c(2,2,2,0.5))
+par(mfrow = c(1, 3), mar = c(2.5, 2.5, 2, 0), mgp = c(1.5, 0.5, 0))
 plot(mpg ~ disp, data = mtcars_cyl4, col = trans_color, main = "Cyl 4")
 plot(mpg ~ disp, data = mtcars_cyl6, col = trans_color, main = "Cyl 6")
 plot(mpg ~ disp, data = mtcars_cyl8, col = trans_color, main = "Cyl 8")
@@ -211,8 +208,7 @@ legend("topright", legend = c("automatic", "manual"),
 
 ```r
 ggplot(mtcars,
-       aes(x = disp, y = mpg,
-           color = transmission)) +
+       aes(x = disp, y = mpg, color = transmission)) +
   geom_point() +
   facet_wrap(~ cyl)
 ```
@@ -414,7 +410,7 @@ class: middle
 
 The American Association of University Professors (AAUP) is a nonprofit membership association of faculty and other academic professionals. [This report](https://www.aaup.org/sites/default/files/files/AAUP_Report_InstrStaff-75-11_apr2013.pdf) by the AAUP shows trends in instructional staff employees between 1975 and 2011, and contains an image very similar to the one given below.
 
-&lt;img src="img/staff-employment.png" width="60%" style="display: block; margin: auto;" /&gt;
+&lt;img src="img/staff-employment.png" width="50%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -505,7 +501,7 @@ pivot_longer(data, cols, names_to = "name",
 - **Stretch goal:** Convert the back to wide format from long format.
 ]
 
-<div class="countdown" id="timer_5e2f1144" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5e334d33" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -544,11 +540,9 @@ staff_long
 
 ---
 
-.discussion[
-This doesn't look quite right, how would you fix it?
-]
+## Nope!
 
-.small[
+.midi[
 
 ```r
 staff_long %&gt;%
@@ -561,6 +555,8 @@ staff_long %&gt;%
 ]
 
 ---
+
+## Meh
 
 .midi[
 
@@ -650,7 +646,7 @@ class: middle
 Convert all factor variables in `evals` to characters. Keep in mind that this should be introductory audience friendly, if possible. For any function you choose, think about how you would introduce it to your students.
 ]
 
-<div class="countdown" id="timer_5e2f11ac" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5e334e04" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -679,7 +675,7 @@ Solve the same problem using `dplyr::across()`.
 countdown(minutes = 3)
 ```
 
-<div class="countdown" id="timer_5e2f13ed" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5e334d2c" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -705,19 +701,20 @@ evals %&gt;% select(score, starts_with("bty_"))
 
 ```
 ## # A tibble: 463 x 8
-##    score bty_f1lower bty_f1upper bty_f2upper bty_m1lower bty_m1upper bty_m2upper
-##    &lt;dbl&gt;       &lt;int&gt;       &lt;int&gt;       &lt;int&gt;       &lt;int&gt;       &lt;int&gt;       &lt;int&gt;
-##  1   4.7           5           7           6           2           4           6
-##  2   4.1           5           7           6           2           4           6
-##  3   3.9           5           7           6           2           4           6
-##  4   4.8           5           7           6           2           4           6
-##  5   4.6           4           4           2           2           3           3
-##  6   4.3           4           4           2           2           3           3
-##  7   2.8           4           4           2           2           3           3
-##  8   4.1           5           2           5           2           3           3
-##  9   3.4           5           2           5           2           3           3
-## 10   4.5           2           5           4           3           3           2
-## # … with 453 more rows, and 1 more variable: bty_avg &lt;dbl&gt;
+##    score bty_f1lower bty_f1upper bty_f2upper bty_m1lower bty_m1upper
+##    &lt;dbl&gt;       &lt;int&gt;       &lt;int&gt;       &lt;int&gt;       &lt;int&gt;       &lt;int&gt;
+##  1   4.7           5           7           6           2           4
+##  2   4.1           5           7           6           2           4
+##  3   3.9           5           7           6           2           4
+##  4   4.8           5           7           6           2           4
+##  5   4.6           4           4           2           2           3
+##  6   4.3           4           4           2           2           3
+##  7   2.8           4           4           2           2           3
+##  8   4.1           5           2           5           2           3
+##  9   3.4           5           2           5           2           3
+## 10   4.5           2           5           4           3           3
+## # … with 453 more rows, and 2 more variables: bty_m2upper &lt;int&gt;,
+## #   bty_avg &lt;dbl&gt;
 ```
 ]
 
@@ -924,18 +921,18 @@ sales %&gt;%
 
 ```
 ## # A tibble: 620 x 7
-##    gender first_name last_name        age phone_number hobbies   purchases       
-##    &lt;chr&gt;  &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt;        &lt;list&gt;    &lt;list&gt;          
-##  1 Female Kimberly   Beckstead         24 216-555-2549 &lt;chr [2]&gt; &lt;named list [10…
-##  2 Male   Neel       Garvin            35 819-555-3189 &lt;chr [2]&gt; &lt;named list [10…
-##  3 Male   Neel       Garvin            35 819-555-3189 &lt;chr [2]&gt; &lt;named list [10…
-##  4 Female Chelsea    Bouchard          41 &lt;NA&gt;         &lt;chr [3]&gt; &lt;named list [10…
-##  5 Female Chelsea    Bouchard          41 &lt;NA&gt;         &lt;chr [3]&gt; &lt;named list [10…
-##  6 Female Chelsea    Bouchard          41 &lt;NA&gt;         &lt;chr [3]&gt; &lt;named list [10…
-##  7 Female Bryanna    Welsh             19 &lt;NA&gt;         &lt;chr [2]&gt; &lt;named list [10…
-##  8 Female Bryanna    Welsh             19 &lt;NA&gt;         &lt;chr [2]&gt; &lt;named list [10…
-##  9 Male   Caleb      Garcia-Wideman    37 907-555-9236 &lt;chr [3]&gt; &lt;named list [10…
-## 10 Male   Caleb      Garcia-Wideman    37 907-555-9236 &lt;chr [3]&gt; &lt;named list [10…
+##    gender first_name last_name       age phone_number hobbies  purchases     
+##    &lt;chr&gt;  &lt;chr&gt;      &lt;chr&gt;         &lt;dbl&gt; &lt;chr&gt;        &lt;list&gt;   &lt;list&gt;        
+##  1 Female Kimberly   Beckstead        24 216-555-2549 &lt;chr [2… &lt;named list […
+##  2 Male   Neel       Garvin           35 819-555-3189 &lt;chr [2… &lt;named list […
+##  3 Male   Neel       Garvin           35 819-555-3189 &lt;chr [2… &lt;named list […
+##  4 Female Chelsea    Bouchard         41 &lt;NA&gt;         &lt;chr [3… &lt;named list […
+##  5 Female Chelsea    Bouchard         41 &lt;NA&gt;         &lt;chr [3… &lt;named list […
+##  6 Female Chelsea    Bouchard         41 &lt;NA&gt;         &lt;chr [3… &lt;named list […
+##  7 Female Bryanna    Welsh            19 &lt;NA&gt;         &lt;chr [2… &lt;named list […
+##  8 Female Bryanna    Welsh            19 &lt;NA&gt;         &lt;chr [2… &lt;named list […
+##  9 Male   Caleb      Garcia-Widem…    37 907-555-9236 &lt;chr [3… &lt;named list […
+## 10 Male   Caleb      Garcia-Widem…    37 907-555-9236 &lt;chr [3… &lt;named list […
 ## # … with 610 more rows
 ```
 
@@ -1080,7 +1077,7 @@ tibble(run = 1:5) %&gt;%
 - There are many ways of getting to the answer
 - Some likely need more scaffolding than others
 - It's worth considering how much of `purrr` fits into your introductory data science curriculum
-  - We'll give one example later where `purrr` provides big wins!
+  - We'll give one example later where `purrr` provides big wins in the context of web scraping from many, similarly formatted pages!
 
 ---
 

@@ -139,12 +139,10 @@ mtcars <- mtcars %>%
 
 .small[
 ```{r fig.height=1.5}
-mtcars$trans_color <- ifelse(mtcars$transmission == "automatic",
-                             "green", "blue")
-par(mar=c(0,0,0,0))
+mtcars$trans_color <- ifelse(mtcars$transmission == "automatic", "green", "blue")
+par(mar = c(2.5, 2.5, 0, 0), mgp = c(1.5, 0.5, 0))
 plot(mtcars$mpg ~ mtcars$disp, col = mtcars$trans_color)
-legend("topright",
-       legend = c("automatic", "manual"),
+legend("topright", legend = c("automatic", "manual"),
        pch = 1, col = c("green", "blue"))
 ```
 ]
@@ -157,8 +155,7 @@ legend("topright",
 
 ```{r fig.height=1.7}
 ggplot(mtcars,
-       aes(x = disp, y = mpg,
-           color = transmission)) +
+       aes(x = disp, y = mpg, color = transmission)) +
   geom_point()
 ```
 
@@ -173,7 +170,7 @@ ggplot(mtcars,
 mtcars_cyl4 = mtcars[mtcars$cyl == 4, ]
 mtcars_cyl6 = mtcars[mtcars$cyl == 6, ]
 mtcars_cyl8 = mtcars[mtcars$cyl == 8, ]
-par(mfrow = c(1, 3), mar = c(2,2,2,0.5))
+par(mfrow = c(1, 3), mar = c(2.5, 2.5, 2, 0), mgp = c(1.5, 0.5, 0))
 plot(mpg ~ disp, data = mtcars_cyl4, col = trans_color, main = "Cyl 4")
 plot(mpg ~ disp, data = mtcars_cyl6, col = trans_color, main = "Cyl 6")
 plot(mpg ~ disp, data = mtcars_cyl8, col = trans_color, main = "Cyl 8")
@@ -190,8 +187,7 @@ legend("topright", legend = c("automatic", "manual"),
 
 ```{r fig.height=1.5}
 ggplot(mtcars,
-       aes(x = disp, y = mpg,
-           color = transmission)) +
+       aes(x = disp, y = mpg, color = transmission)) +
   geom_point() +
   facet_wrap(~ cyl)
 ```
@@ -380,7 +376,7 @@ class: middle
 
 The American Association of University Professors (AAUP) is a nonprofit membership association of faculty and other academic professionals. [This report](https://www.aaup.org/sites/default/files/files/AAUP_Report_InstrStaff-75-11_apr2013.pdf) by the AAUP shows trends in instructional staff employees between 1975 and 2011, and contains an image very similar to the one given below.
 
-```{r echo=FALSE,out.width="60%",fig.align="center"}
+```{r echo=FALSE,out.width="50%",fig.align="center"}
 knitr::include_graphics("img/staff-employment.png")
 ```
 
@@ -484,11 +480,9 @@ staff_long
 
 ---
 
-.discussion[
-This doesn't look quite right, how would you fix it?
-]
+## Nope!
 
-.small[
+.midi[
 ```{r fig.height=2}
 staff_long %>%
   ggplot(aes(x = year, y = percentage, color = faculty_type)) +
@@ -498,6 +492,8 @@ staff_long %>%
 ]
 
 ---
+
+## Meh
 
 .midi[
 ```{r fig.height=2}
@@ -526,7 +522,7 @@ staff_long %>%
 ## More improvement
 
 .midi[
-```{r fig.width=7}
+```{r fig.width=7, fig.height = 2.5}
 staff_long %>%
   ggplot(aes(x = year, y = percentage, group = faculty_type, 
              color = faculty_type)) +
@@ -538,7 +534,7 @@ staff_long %>%
 ---
 
 .midi[
-```{r fig.width=7, fig.height=4, echo=FALSE}
+```{r echo=FALSE}
 staff_long %>%
   mutate(part_time = if_else(faculty_type == "Part-Time Faculty", "Part-Time Faculty", "Other Faculty")) %>%
   ggplot(aes(x = year, y = percentage/100, group = faculty_type, 
@@ -809,7 +805,7 @@ tibble(run = 1:5) %>%
 - There are many ways of getting to the answer
 - Some likely need more scaffolding than others
 - It's worth considering how much of `purrr` fits into your introductory data science curriculum
-  - We'll give one example later where `purrr` provides big wins!
+  - We'll give one example later where `purrr` provides big wins in the context of web scraping from many, similarly formatted pages!
 
 ---
 
